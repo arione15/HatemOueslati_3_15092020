@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif; }
+
+h2 {
+  margin: 1.5em 0 1.5em 1em;
+  line-height: 1; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+p,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  padding-left: 1em; }
+
+.flexHeader {
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  padding: 2em 0 2em;
+  background-color: white;
+  text-align: center; }
+
+#logo {
+  width: 50%; }
+
+.locate {
+  min-height: 3em;
+  background-color: #eaeaea;
+  border-top: 4px solid #eaeaea;
+  border-radius: 3px; }
+
+.main {
+  display: flex;
+  flex-direction: column; }
+
+.explorer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0 4em 0;
+  background-color: #f6f6f6; }
+  .explorer .vue a {
+    display: block;
+    background-color: #9356dc;
+    border-radius: 5em;
+    margin-top: 2em;
+    padding: 0.8em 1.6em;
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em; }
+
+.guide {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 1.8em 1.8em;
+  position: relative; }
+  .guide .etape {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0.5em 1.5em;
+    background-color: #f6f6f6;
+    width: 95%;
+    margin: 0 auto;
+    height: 3em;
+    border-radius: 30px;
+    box-shadow: 2px 10px 2px red; }
+  .guide span {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #9356dc;
+    border-radius: 50%;
+    text-align: center;
+    color: white; }
+
+.notes {
+  background-color: #f6f6f6;
+  padding-bottom: 4em; }
+  .notes .restaurants {
+    width: 90%;
+    margin: 0 auto 1em auto;
+    padding-bottom: 1.5em;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    position: relative; }
+    .notes .restaurants .photo1,
+    .notes .restaurants .photo2,
+    .notes .restaurants .photo3,
+    .notes .restaurants .photo4 {
+      height: 190px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      border-radius: 20px 20px 0 0;
+      margin-bottom: 1em; }
+    .notes .restaurants .photo1 {
+      background-image: url("/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash-400b.jpg"); }
+    .notes .restaurants .photo2 {
+      background-image: url("/img/restaurants/stil-u2Lp8tXIcjw-unsplash-400.jpg"); }
+    .notes .restaurants .photo3 {
+      background-image: url("/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash-400b.jpg"); }
+    .notes .restaurants .photo4 {
+      background-image: url("/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-f.jpg"); }
+    .notes .restaurants .new {
+      float: right;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 80px;
+      height: 25px;
+      padding-top: 5px;
+      text-align: center;
+      background-color: #99e2d0;
+      border-radius: 4px;
+      color: #139274; }
+
+.heart {
+  position: absolute;
+  right: 1.5em;
+  top: 13em; }
+
+footer {
+  min-height: 14em;
+  width: 100%;
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  line-height: 2; }
+  footer .flexFooter {
+    padding: 1.5em; }
+    footer .flexFooter .suggestResto {
+      display: flex;
+      flex-direction: row;
+      justify-content: start; }
+    footer .flexFooter .partner {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
