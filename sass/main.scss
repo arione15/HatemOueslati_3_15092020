@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Roboto, sans-serif;
+    font-size: 100%;
 }
 h2 {
     margin: 1.5em 0 1.5em 1em;
@@ -34,6 +35,14 @@ $text_clair: #fff;
 $nuance_gris: #eaeaea;
 $nuance_gris2: #f6f6f6;
 
+
+
+// Spinner Acceuil
+
+
+
+
+
 // Les Mixins
 
 @mixin mixHeader {
@@ -55,6 +64,15 @@ $nuance_gris2: #f6f6f6;
     line-height: 2;
 }
 
+@mixin localisation {
+    min-height: 3em;
+    background-color: $nuance_gris;
+    border-top: 4px solid $nuance_gris;
+    border-radius: 3px;
+}
+
+
+
 // en-tête
 .flexHeader {
     @include mixHeader;
@@ -64,10 +82,7 @@ $nuance_gris2: #f6f6f6;
 }
 // geolocalisalisation
 .locate {
-    min-height: 3em;
-    background-color: $nuance_gris;
-    border-top: 4px solid $nuance_gris;
-    border-radius: 3px;
+    @include localisation;
 }
 .main {
     display: flex;
@@ -83,7 +98,7 @@ $nuance_gris2: #f6f6f6;
     background-color: $nuance_gris2;
     .vue a {
         display: block; // pour pouvoir lui donne un width
-        background-color: $btn_principaux;
+        background-color: $btn_principaux; 
         border-radius: 5em;
         margin-top: 2em;
         padding: 0.8em 1.6em;
@@ -92,6 +107,8 @@ $nuance_gris2: #f6f6f6;
         text-align: center;
         color: #fff;
         font-size: 1.2em;
+        box-shadow: 2px 10px 2px red;
+
     }
 }
 
@@ -140,6 +157,8 @@ $nuance_gris2: #f6f6f6;
         background-color: white;
         border-radius: 20px 20px 20px 20px;
         position: relative;
+        box-shadow: 2px 10px 2px red;
+
         .photo1,
         .photo2,
         .photo3,
@@ -204,5 +223,15 @@ footer {
             flex-direction: row; // il faut casser d'abord le flex-direction:column
             align-items: center;
         }
+    }
+}
+
+
+.vue a, .restaurants, .order, .dish{
+   // transition: transform background-color 10s;
+   transition: all 450ms;
+    &:hover{
+        background-color:green;
+        box-shadow: 2px 10px 2px blue;
     }
 }
