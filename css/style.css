@@ -29,16 +29,31 @@ h4 {
   width: 100%;
   padding: 2em 0 2em;
   background-color: white;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
 
 #logo {
-  width: 50%; }
+  max-width: 100%; }
+
+#fleche {
+  position: absolute;
+  left: 1.5em; }
 
 .locate {
   min-height: 3em;
   background-color: #eaeaea;
   border-top: 4px solid #eaeaea;
   border-radius: 3px; }
+
+.photoP1 {
+  background-image: url("/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash-350.jpg");
+  width: 100%;
+  height: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: -20; }
 
 .main {
   display: flex;
@@ -92,10 +107,13 @@ h4 {
     text-align: center;
     color: white; }
 
-.notes {
+.notes,
+.notes1 {
   background-color: #f6f6f6;
-  padding-bottom: 4em; }
-  .notes .restaurants {
+  padding-bottom: 4em;
+  border-radius: 3em 3em 0 0; }
+  .notes .restaurants,
+  .notes1 .restaurants {
     width: 90%;
     margin: 0 auto 1em auto;
     padding-bottom: 1.5em;
@@ -106,7 +124,11 @@ h4 {
     .notes .restaurants .photo1,
     .notes .restaurants .photo2,
     .notes .restaurants .photo3,
-    .notes .restaurants .photo4 {
+    .notes .restaurants .photo4,
+    .notes1 .restaurants .photo1,
+    .notes1 .restaurants .photo2,
+    .notes1 .restaurants .photo3,
+    .notes1 .restaurants .photo4 {
       height: 190px;
       background-position: center;
       background-repeat: no-repeat;
@@ -114,15 +136,20 @@ h4 {
       position: relative;
       border-radius: 20px 20px 0 0;
       margin-bottom: 1em; }
-    .notes .restaurants .photo1 {
+    .notes .restaurants .photo1,
+    .notes1 .restaurants .photo1 {
       background-image: url("/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash-400b.jpg"); }
-    .notes .restaurants .photo2 {
+    .notes .restaurants .photo2,
+    .notes1 .restaurants .photo2 {
       background-image: url("/img/restaurants/stil-u2Lp8tXIcjw-unsplash-400.jpg"); }
-    .notes .restaurants .photo3 {
+    .notes .restaurants .photo3,
+    .notes1 .restaurants .photo3 {
       background-image: url("/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash-400b.jpg"); }
-    .notes .restaurants .photo4 {
+    .notes .restaurants .photo4,
+    .notes1 .restaurants .photo4 {
       background-image: url("/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-f.jpg"); }
-    .notes .restaurants .new {
+    .notes .restaurants .new,
+    .notes1 .restaurants .new {
       float: right;
       position: absolute;
       top: 20px;
@@ -134,6 +161,34 @@ h4 {
       background-color: #99e2d0;
       border-radius: 4px;
       color: #139274; }
+
+.menus {
+  cursor: pointer; }
+  .menus:hover + .box {
+    transform: scale(0); }
+    .menus:hover + .box .check {
+      transform: rotate(0deg); }
+
+.box {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #99e2d0;
+  border-radius: 4px;
+  color: #139274;
+  transform: scale(1);
+  transition: transform 330ms ease-in-out; }
+  .box .check {
+    display: block;
+    float: right;
+    position: absolute;
+    right: 30%;
+    top: 35%;
+    transform: rotate(-360deg);
+    transition: transform 500ms ease-in-out; }
 
 .heart {
   position: absolute;
@@ -159,6 +214,25 @@ footer {
       flex-direction: row;
       align-items: center; }
 
-.vue a:hover, .restaurants:hover, .order:hover, .dish:hover {
-  background-color: green;
-  box-shadow: 2px 10px 2px blue; }
+.vue a,
+.restaurants,
+.order,
+.dish {
+  transition: all 450ms; }
+  .vue a:hover,
+  .restaurants:hover,
+  .order:hover,
+  .dish:hover {
+    background-color: green;
+    box-shadow: 2px 10px 2px blue; }
+
+hr {
+  background-color: #99e2d0;
+  height: 3px;
+  width: 12%;
+  text-align: left;
+  margin-left: 1em;
+  border: none; }
+
+.three-dishes {
+  margin-bottom: 3em; }
