@@ -204,8 +204,22 @@ h4 {
 
 .heart {
   position: absolute;
-  right: 1.5em;
+  right: 2.5em;
   top: 13em; }
+  .heart:hover #heart2 {
+    opacity: 1; }
+  .heart #heart2 {
+    opacity: 0;
+    transition: opacity 1000ms;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .heart #heart1 {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 footer {
   min-height: 14em;
@@ -235,7 +249,7 @@ footer {
   .restaurants:hover,
   .order:hover,
   .dish:hover {
-    background-color: green;
+    background-color: #fff;
     box-shadow: 2px 10px 2px blue; }
 
 hr {
