@@ -1,28 +1,34 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 100%; }
 
+h1 {
+  font-size: 1.5em;
+  margin-top: 2em; }
+
 h2 {
-  margin: 1.5em 0 1.5em 1em;
+  margin: 2em 0 1em 1em;
   line-height: 1; }
 
 a {
   text-decoration: none;
   color: white; }
+  a#gps {
+    color: black; }
 
-p,
 h3,
 h4 {
   margin-top: 0;
-  margin-bottom: 0;
-  line-height: 1.5;
-  padding-left: 1em;
-  text-overflow: ellipsis; }
+  margin-bottom: 0; }
+
+p {
+  font-size: 1em; }
 
 .flexHeader {
   display: inline-block;
@@ -33,70 +39,80 @@ h4 {
   text-align: center;
   position: relative; }
 
-#logo {
-  max-width: 100%; }
-
 #fleche {
   position: absolute;
-  left: 1.5em; }
+  left: 1.5em;
+  display: block;
+  width: 5%;
+  padding-top: 0.3em; }
 
 .locate {
   min-height: 3em;
   background-color: #eaeaea;
   border-top: 4px solid #eaeaea;
-  border-radius: 3px; }
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .locate img {
+    margin-right: 1em; }
 
 .photoP1 {
-  background-image: url("/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash-350.jpg");
-  width: 100%;
-  height: 30%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  z-index: -20; }
+  height: 18em;
+  position: absolute;
+  top: 5em;
+  left: 0em; }
+  .photoP1 img {
+    display: block;
+    width: 100%; }
 
 .main {
   display: flex;
   flex-direction: column; }
 
+.mainPages {
+  margin-top: 13em; }
+
 .explorer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em 0 4em 0;
+  text-align: center;
+  padding-bottom: 3em;
   background-color: #f6f6f6; }
+  .explorer .welcome {
+    padding: 0 4em; }
+    .explorer .welcome p {
+      color: #696969;
+      font-size: 1em; }
   .explorer .vue a {
     display: block;
     background-color: #9356dc;
     border-radius: 5em;
-    margin-top: 2em;
-    padding: 0.8em 1.6em;
+    padding: 1em 3.5em;
     list-style-type: none;
     text-decoration: none;
     text-align: center;
     color: #fff;
-    font-size: 1.2em;
-    box-shadow: 2px 10px 2px red; }
+    box-shadow: 2px 8px 2px #d8d8d8;
+    background: linear-gradient(-45deg, #9356dc, pink); }
 
-.guide {
+.etape {
+  position: relative;
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 1.8em 1.8em;
-  position: relative; }
-  .guide .etape {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 0.5em 1.5em;
-    background-color: #f6f6f6;
-    width: 95%;
-    margin: 0 auto;
-    height: 3em;
-    border-radius: 30px;
-    box-shadow: 2px 10px 2px red; }
-  .guide span {
+  padding: 0.5em 0.5em;
+  background-color: #f6f6f6;
+  width: 80%;
+  margin: 1.8em 2em;
+  height: 3.5em;
+  border-radius: 1.2em;
+  box-shadow: 2px 8px 2px #d8d8d8; }
+  .etape :last-child {
+    margin-left: 1em;
+    font-weight: 600; }
+  .etape span {
     display: block;
     position: absolute;
     top: 20px;
@@ -108,20 +124,34 @@ h4 {
     text-align: center;
     color: white; }
 
+.booking {
+  margin-bottom: 2.5em; }
+
+.notes1 {
+  border-radius: 3em 3em 0 0;
+  z-index: 10; }
+  .notes1 h2 {
+    font-family: "Shrikhand", cursive;
+    font-size: 1.7em;
+    margin-top: 1.5em; }
+  .notes1 p,
+  .notes1 hr {
+    margin-left: 1.5em;
+    margin-bottom: 0; }
+
 .notes,
 .notes1 {
   background-color: #f6f6f6;
-  padding-bottom: 4em;
-  border-radius: 3em 3em 0 0; }
+  padding-bottom: 2.5em; }
   .notes .restaurants,
   .notes1 .restaurants {
     width: 90%;
-    margin: 0 auto 1em auto;
-    padding-bottom: 1.5em;
+    margin: 0 auto 1.5em auto;
+    padding-bottom: 0.1em;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
     position: relative;
-    box-shadow: 2px 10px 2px red; }
+    box-shadow: 2px 8px 2px #d8d8d8; }
     .notes .restaurants .photo1,
     .notes .restaurants .photo2,
     .notes .restaurants .photo3,
@@ -152,93 +182,175 @@ h4 {
     .notes .restaurants .new,
     .notes1 .restaurants .new {
       float: right;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 80px;
-      height: 25px;
-      padding-top: 5px;
+      padding-top: 0.5em;
+      margin-right: 1em;
+      width: 5.5em;
+      height: 1.8em;
       text-align: center;
+      vertical-align: middle;
       background-color: #99e2d0;
-      border-radius: 4px;
-      color: #139274; }
+      border-radius: 2px;
+      color: #139274;
+      font-size: 0.8em;
+      font-weight: 600; }
+
+.dish {
+  margin-top: 2.5em;
+  margin-bottom: 1em; }
+
+.three-dishes {
+  margin-bottom: 3em; }
+
+.nom {
+  margin-left: 1em; }
+  .nom p {
+    margin-top: 0.3em; }
+
+hr {
+  background-color: #99e2d0;
+  height: 3px;
+  width: 12%;
+  text-align: left;
+  margin-bottom: 4em;
+  border: none; }
+
+/***********************************************/
+/***********************************************/
+/* Animation bouton check et texte tronqué*/
+/***********************************************/
+/***********************************************/
+.nomPlat {
+  flex-grow: 1;
+  width: 60%;
+  padding-top: .5em;
+  padding-bottom: .5em; }
+  .nomPlat p, .nomPlat h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 0;
+    margin-left: 1em;
+    line-height: 1.5; }
 
 .prix {
-  position: absolute;
-  right: 2em;
-  top: 2em;
-  width: 3em;
-  transform: translateX(0);
-  transition: transform 1000ms; }
+  width: 20%;
+  margin-top: 1em; }
 
 .box {
-  transform-origin: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30%;
-  height: 100%;
+  display: flex;
+  width: 0;
+  transition: all 1s;
   background-color: #99e2d0;
   border-radius: 0 20px 20px 0;
-  color: #139274;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: transform 1000ms; }
+  color: #139274; }
   .box .check {
-    position: absolute;
-    right: 30%;
-    top: 35%;
     margin: auto;
-    transform: rotate(-360deg);
-    transition: transform 1500ms ease-in-out; }
+    transition: transform 1s;
+    transform: rotate(180deg); }
 
 .menus {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
   cursor: pointer; }
   .menus:hover > .box {
-    visibility: visible;
-    transform: scaleX(1); }
+    width: 20%; }
     .menus:hover > .box .check {
       transform: rotate(0deg); }
-  .menus:hover > .prix {
-    transform: translateX(-5em); }
 
-.heart {
+/* fin Limitation de la longeur du texte des menus Animation bouton chek et texte tronqué*/
+/* ANimation à l'affichage de la page de menus : les menus apparaissent peit à petit*/
+@keyframes affichageMenus {
+  0% {
+    transform: translateY(20%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+#e1 {
+  animation: affichageMenus 1s ease-out 0s 1;
+  animation-duration: 2s 4s; }
+
+#e2 {
+  animation: affichageMenus 2s ease-out 0s 1;
+  animation-duration: 2s 4s; }
+
+#e3 {
+  animation: affichageMenus 3s ease-out 0s 1;
+  animation-duration: 2s 4s; }
+
+#p1 {
+  animation: affichageMenus 4s ease-out 0s 1;
+  animation-duration: 2s 4s; }
+
+#p2 {
+  animation: affichageMenus 5s ease-out 0s 1;
+  animation-duration: 2s 4s; }
+
+#p3 {
+  animation: affichageMenus 6s ease-out 0s 1;
+  animation-duration: 2s 4s; }
+
+#d1 {
+  animation: affichageMenus 7s ease-out 0s 1;
+  animation-duration: 2s 4s; }
+
+#d2 {
+  animation: affichageMenus 8s ease-out 0s 1;
+  animation-duration: 2s 4s; }
+
+#d3 {
+  animation: affichageMenus 9s ease-out 0s 1;
+  animation-duration: 2s 4s; }
+
+.heart1 {
   position: absolute;
   right: 2.5em;
-  top: 13em; }
-  .heart:hover #heart2 {
-    opacity: 1; }
-  .heart #heart2 {
-    opacity: 0;
-    transition: opacity 1000ms;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .heart #heart1 {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0; }
+  top: 13em;
+  height: 30px; }
+  .heart1:hover .heart2 {
+    height: 30px; }
+
+.heart2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: height 0.4s ease;
+  height: 0;
+  overflow: hidden; }
+
+.heart1Pages {
+  position: absolute;
+  top: 20em;
+  right: 2.5em; }
 
 footer {
-  min-height: 14em;
+  min-height: 12em;
   width: 100%;
   background-color: #353535;
   display: flex;
   flex-direction: column;
   color: #fff;
-  line-height: 2; }
+  line-height: 1.7; }
   footer .flexFooter {
     padding: 1.5em; }
     footer .flexFooter .suggestResto {
       display: flex;
       flex-direction: row;
       justify-content: start; }
+      footer .flexFooter .suggestResto h4 {
+        margin-left: 0.5em; }
     footer .flexFooter .partner {
       display: flex;
       flex-direction: row;
       align-items: center; }
+      footer .flexFooter .partner h4 {
+        margin-left: 0.5em; }
+
+.logo {
+  padding-bottom: 0.5em; }
 
 .vue a,
 .restaurants,
@@ -249,16 +361,103 @@ footer {
   .restaurants:hover,
   .order:hover,
   .dish:hover {
-    background-color: #fff;
-    box-shadow: 2px 10px 2px blue; }
+    background-color: #fff; }
 
-hr {
+/* Loader */
+.loader {
+  width: 100%;
+  height: 100%;
   background-color: #99e2d0;
-  height: 3px;
-  width: 12%;
-  text-align: left;
-  margin-left: 1em;
-  border: none; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .loader .tube {
+    width: 30%;
+    height: 4%;
+    margin-bottom: 20px;
+    border: solid 2px #f6f6f6;
+    background-color: #ff79da;
+    border-radius: 2;
+    animation: loadBar 1s 100ms ease-in-out 3 alternate both; }
+    .loader .tube-1 {
+      animation-delay: 300ms; }
+    .loader .tube-2 {
+      animation-delay: 600ms; }
+    .loader .tube-3 {
+      animation-delay: 900ms; }
+    .loader .tube-4 {
+      animation-delay: 1200ms; }
+    .loader .tube .boule {
+      display: block;
+      margin-top: 5px;
+      width: 15%;
+      height: 75%;
+      background-color: #139274;
+      border-radius: 50%;
+      margin-left: 20%;
+      animation: mvtBoule 1s 100ms ease-in-out 4 alternate both; }
+      .loader .tube .boule-1 {
+        animation-delay: 500ms; }
+      .loader .tube .boule-2 {
+        animation-delay: 1000ms; }
+      .loader .tube .boule-3 {
+        animation-delay: 1500ms; }
+      .loader .tube .boule-4 {
+        animation-delay: 2000ms; }
 
-.three-dishes {
-  margin-bottom: 3em; }
+@keyframes loadBar {
+  0% {
+    transform: scaleX(0); }
+  100% {
+    transform: scaleX(1); } }
+
+@keyframes mvtBoule {
+  0% {
+    margin-left: 0%;
+    opacity: 1; }
+  100% {
+    margin-left: 80%;
+    opacity: 0.8; } }
+
+/* Technique pour n'afficher qu'une partie d'une image : donner des dimensions au conteneur et lui appliquer un overflow hidden et jouer sur les marges >0 ou <0 de l'image*/
+/*******************************************************************/
+/* .photoP1{
+    
+    width:100%;
+    height:100%;
+    overflow: hidden;
+  img{
+      margin-top:-180px;
+  }
+} */
+/*******************************************************************/
+@media screen and (min-width: 993px) {
+  .modeEmploi {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; }
+    .modeEmploi .etape {
+      margin: auto;
+      width: 25%; }
+      .modeEmploi .etape span {
+        top: -10px;
+        left: 120px; }
+      .modeEmploi .etape p {
+        font-size: 1em;
+        white-space: nowrap; } }
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .modeEmploi {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; }
+    .modeEmploi .etape {
+      margin: auto;
+      width: 25%; }
+      .modeEmploi .etape span {
+        top: -10px;
+        left: 80px; }
+      .modeEmploi .etape p {
+        font-size: .8em;
+        white-space: nowrap; } }

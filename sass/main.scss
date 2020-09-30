@@ -5,26 +5,37 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: Roboto, sans-serif;
-    font-size: 100%;
+    //align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 100%; // pour pouvoir utiliser les em, rem et %
+}
+h1 {
+    font-size: 1.5em;
+    margin-top: 2em;
 }
 h2 {
-    margin: 1.5em 0 1.5em 1em;
+    margin: 2em 0 1em 1em;
     line-height: 1;
 }
 a {
     text-decoration: none;
     color: white;
+    &#gps {
+        color: black;
+    }
 }
-p,
 h3,
 h4 {
     margin-top: 0;
     margin-bottom: 0;
-    line-height: 1.5;
-    padding-left: 1em;
-    text-overflow: ellipsis;
+    //line-height: .5;
+    //padding-left: 1em;
 }
+p{
+    font-size: 1em;
+   // white-space: nowrap;
+}
+
 
 // Les variables
 $btn_principaux: #9356dc;
@@ -51,13 +62,13 @@ $nuance_gris2: #f6f6f6;
 }
 
 @mixin mixFooter {
-    min-height: 14em;
+    min-height: 12em;
     width: 100%;
     background-color: $bgFooter;
     display: flex;
     flex-direction: column;
     color: $text_clair;
-    line-height: 2;
+    line-height: 1.7;
 }
 
 @mixin localisation {
@@ -65,112 +76,143 @@ $nuance_gris2: #f6f6f6;
     background-color: $nuance_gris;
     border-top: 4px solid $nuance_gris;
     border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 // en-tête
 .flexHeader {
     @include mixHeader;
 }
-#logo {
-    max-width: 100%;
-    // max-width: 100%;
-    //height: auto;
-}
 #fleche {
     position: absolute;
     left: 1.5em;
+    display: block;
+    width: 5%;
+    padding-top: 0.3em;
 }
 // geolocalisalisation
 .locate {
     @include localisation;
+    & img {
+        margin-right: 1em;
+    }
 }
-
 .photoP1 {
-    background-image: url("/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash-350.jpg");
-    width: 100%;
-    height: 30%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    z-index: -20;
+    //background-image: url("./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash-350.jpg");
+    height: 18em;
+    position: absolute;
+    top: 5em;
+    left: 0em;
+    img {
+        display: block;
+        width: 100%;
+    }
 }
-
 .main {
     display: flex;
     flex-direction: column;
-    //align-items: stretch;
 }
+.mainPages{
+    margin-top: 13em;
+       }
 // Main 1 - Introduction : Vues sur les restos, manuel d'utilisation
 .explorer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1em 0 4em 0;
+    text-align: center;
+    padding-bottom: 3em;
     background-color: $nuance_gris2;
+    .welcome {
+        padding: 0 4em;
+        & p {
+            color: #696969;
+            font-size: 1em;
+        }
+    }
     .vue a {
         display: block; // pour pouvoir lui donne un width
         background-color: $btn_principaux;
         border-radius: 5em;
-        margin-top: 2em;
-        padding: 0.8em 1.6em;
+        padding: 1em 3.5em;
         list-style-type: none;
         text-decoration: none;
         text-align: center;
         color: #fff;
-        font-size: 1.2em;
-        box-shadow: 2px 10px 2px red;
+        box-shadow: 2px 8px 2px #d8d8d8;
+        background: linear-gradient(-45deg, $btn_principaux, pink);
     }
 }
 
 // Main 2
-.guide {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 1.8em 1.8em;
-    position: relative;
-    .etape {
+
+.etape {
+        position: relative;
         display: flex;
         justify-content: start;
         align-items: center;
-        padding: 0.5em 1.5em;
+        padding: 0.5em 0.5em;
         background-color: $nuance_gris2;
-        width: 95%;
-        margin: 0 auto;
-        height: 3em;
-        border-radius: 30px;
-        box-shadow: 2px 10px 2px red;
+        width: 80%;
+        //margin: 1.8em 1.8em;
+        margin: 1.8em 2em;
+        height: 3.5em;
+        border-radius: 1.2em;
+        box-shadow: 2px 8px 2px #d8d8d8;
+        & :last-child {
+            margin-left: 1em;
+            font-weight: 600;
+        }
+        span {
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: -10px;
+            width: 1.5em;
+            height: 1.5em;
+            background-color: $btn_principaux;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+        }
     }
+    
 
-    span {
-        display: block;
-        position: absolute;
-        top: 20px;
-        left: -10px;
-        width: 1.5em;
-        height: 1.5em;
-        background-color: $btn_principaux;
-        border-radius: 50%;
-        text-align: center;
-        color: white;
-    }
+.booking {
+    margin-bottom: 2.5em;
 }
 
 // avis restaurants
+
+.notes1 {
+    border-radius: 3em 3em 0 0;
+    z-index: 10;
+    h2 {
+        font-family: "Shrikhand", cursive;
+        font-size: 1.7em;
+        margin-top: 1.5em;
+    }
+    p,
+    hr {
+        margin-left: 1.5em;
+        margin-bottom: 0;
+    }
+}
 .notes,
 .notes1 {
     background-color: $nuance_gris2;
-    padding-bottom: 4em;
-    border-radius: 3em 3em 0 0;
+    padding-bottom: 2.5em;
+    //border-radius: 3em 3em 0 0;
     .restaurants {
         width: 90%;
-        margin: 0 auto 1em auto;
-        padding-bottom: 1.5em;
+        margin: 0 auto 1.5em auto;
+        padding-bottom: 0.1em;
         background-color: white;
         border-radius: 20px 20px 20px 20px;
         position: relative;
-        box-shadow: 2px 10px 2px red;
+        box-shadow: 2px 8px 2px #d8d8d8;
         .photo1,
         .photo2,
         .photo3,
@@ -197,94 +239,173 @@ $nuance_gris2: #f6f6f6;
         }
         .new {
             float: right;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 80px;
-            height: 25px;
-            padding-top: 5px;
+            padding-top: 0.5em;
+            margin-right: 1em;
+            width: 5.5em;
+            height: 1.8em;
             text-align: center;
+            vertical-align: middle;
             background-color: $btn_new;
-            border-radius: 4px;
+            border-radius: 2px;
             color: $btn_new2;
+            font-size: 0.8em;
+            font-weight: 600;
         }
     }
 }
-
-.prix {
-    position: absolute;
-    right: 2em;
-    top: 2em;
-    width: 3em;
-    transform: translateX(0);
-    transition: transform 1000ms;
+.dish {
+    margin-top: 2.5em;
+    margin-bottom: 1em;
 }
+.three-dishes {
+    margin-bottom: 3em;
+}
+.nom {
+    margin-left: 1em;
+    p {
+        margin-top: 0.3em;
+    }
+}
+hr {
+    background-color: $btn_new;
+    height: 3px;
+    width: 12%;
+    text-align: left;
+    margin-bottom: 4em;
+    border: none;
+}
+/***********************************************/
+/***********************************************/
+/* Animation bouton check et texte tronqué*/
+/***********************************************/
+/***********************************************/
 
-.box {
-    transform-origin: 100%;
-    //display:none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30%;
-    height: 100%;
+.nomPlat {
+    flex-grow: 1;
+    width: 60%;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    p, h3 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-top: 0;
+      margin-left: 1em;
+      line-height: 1.5;
+    }
+  }
+  .prix {
+   width: 20%;
+    margin-top: 1em;
+  }
+  .box {
+    display: flex;
+    width: 0;
+    transition: all 1s;
     background-color: $btn_new;
     border-radius: 0 20px 20px 0;
     color: $btn_new2;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: transform 1000ms;
     .check {
-        position: absolute;
-        right: 30%;
-        top: 35%;
-        margin: auto;
-        transform: rotate(-360deg);
-        transition: transform 1500ms ease-in-out;
+      margin: auto;
+      transition: transform 1s;
+      transform: rotate(180deg);
+    }
+  }
+  .menus {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover > .box {
+      width: 20%;
+      .check {
+        transform: rotate(0deg);
+      }
+    }
+  }
+  
+/* fin Limitation de la longeur du texte des menus Animation bouton chek et texte tronqué*/
+
+/* ANimation à l'affichage de la page de menus : les menus apparaissent peit à petit*/
+@keyframes affichageMenus {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
-.menus {
-    cursor: pointer;
-    &:hover > .box {
-        visibility: visible;
-        transform: scaleX(1);
-        .check {
-            transform: rotate(0deg);
-        }
-    }
-    &:hover > .prix {
-        transform: translateX(-5em);
-    }
+#e1 {
+    animation: affichageMenus 1s ease-out 0s 1;
+    animation-duration: 2s 4s;
+}
+#e2 {
+    animation: affichageMenus 2s ease-out 0s 1;
+    animation-duration: 2s 4s;
+}
+#e3 {
+    animation: affichageMenus 3s ease-out 0s 1;
+    animation-duration: 2s 4s;
+}
+
+#p1 {
+    animation: affichageMenus 4s ease-out 0s 1;
+    animation-duration: 2s 4s;
+}
+#p2 {
+    animation: affichageMenus 5s ease-out 0s 1;
+    animation-duration: 2s 4s;
+}
+#p3 {
+    animation: affichageMenus 6s ease-out 0s 1;
+    animation-duration: 2s 4s;
+}
+#d1 {
+    animation: affichageMenus 7s ease-out 0s 1;
+    animation-duration: 2s 4s;
+}
+#d2 {
+    animation: affichageMenus 8s ease-out 0s 1;
+    animation-duration: 2s 4s;
+}
+#d3 {
+    animation: affichageMenus 9s ease-out 0s 1;
+    animation-duration: 2s 4s;
 }
 
 // le coeur
 
-.heart {
+.heart1 {
     position: absolute;
     right: 2.5em;
     top: 13em;
+    height: 30px;
+    //overflow: hidden;
+    //background-color: #fff;
     &:hover {
-       & #heart2 {
-           opacity:1;
+        & .heart2 {
+            height: 30px;
         }
     }
-    & #heart2 {
-        opacity:0;
-        transition: opacity 1000ms;
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    & #heart1 {
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-
+}
+.heart2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+     //transform-origin: center center;
+     transition: height 0.4s ease;
+     height: 0;
+     overflow: hidden;
+}
+.heart1Pages{
+    position: absolute;
+    top: 20em;
+    right: 2.5em;
 }
 
 // footer
@@ -297,13 +418,22 @@ footer {
             display: flex;
             flex-direction: row; // il faut casser d'abord le flex-direction:column
             justify-content: start;
+            h4 {
+                margin-left: 0.5em;
+            }
         }
         .partner {
             display: flex;
             flex-direction: row; // il faut casser d'abord le flex-direction:column
             align-items: center;
+            h4 {
+                margin-left: 0.5em;
+            }
         }
     }
+}
+.logo {
+    padding-bottom: 0.5em;
 }
 
 .vue a,
@@ -314,19 +444,127 @@ footer {
     transition: all 450ms;
     &:hover {
         background-color: $text_clair;
-        box-shadow: 2px 10px 2px blue;
+        //  box-shadow: 2px 10px 2px blue;
     }
 }
 
-hr {
+/* Loader */
+.loader {
+    width: 100%;
+    height: 100%;
     background-color: $btn_new;
-    height: 3px;
-    width: 12%;
-    text-align: left;
-    margin-left: 1em;
-    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .tube {
+        width: 30%;
+        height: 4%;
+        margin-bottom: 20px;
+        border: solid 2px $nuance_gris2;
+        background-color: $btn_validation;
+        border-radius: 2;
+        animation: loadBar 1s 100ms ease-in-out 3 alternate both;
+        @for $i from 1 through 4 {
+            &-#{$i} {
+                animation-delay: 300ms * $i;
+            }
+        }
+        & .boule {
+            display: block;
+            margin-top: 5px;
+            width: 15%;
+            height: 75%;
+            background-color: $btn_new2;
+            border-radius: 50%;
+            margin-left: 20%;
+            animation: mvtBoule 1s 100ms ease-in-out 4 alternate both;
+            @for $i from 1 through 4 {
+                &-#{$i} {
+                    animation-delay: 500ms * $i;
+                }
+            }
+        }
+    }
 }
 
-.three-dishes {
-    margin-bottom: 3em;
+@keyframes loadBar {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+@keyframes mvtBoule {
+    0% {
+        margin-left: 0%;
+        opacity: 1;
+    }
+
+    100% {
+        margin-left: 80%;
+        opacity: 0.8;
+    }
+}
+
+
+
+
+/* Technique pour n'afficher qu'une partie d'une image : donner des dimensions au conteneur et lui appliquer un overflow hidden et jouer sur les marges >0 ou <0 de l'image*/
+/*******************************************************************/
+/* .photoP1{
+    
+    width:100%;
+    height:100%;
+    overflow: hidden;
+  img{
+      margin-top:-180px;
+  }
+} */
+
+/*******************************************************************/
+
+ @media screen and(min-width:993px){
+    .modeEmploi{
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        //width:100%;
+        .etape{
+            //flex:1;
+            margin: auto;
+            width:25%;
+            span {
+                top: -10px;
+                left: 120px;
+            }
+            p{
+                font-size: 1em;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@media screen and(min-width:768px) and(max-width:992px){
+    .modeEmploi{
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        //width:100%;
+        .etape{
+            //flex:1;
+            margin: auto;
+            width:25%;
+            span {
+                top: -10px;
+                left: 80px;
+            }
+            p{
+                font-size: .8em;
+                white-space: nowrap;
+            }
+        }
+    }
 }
