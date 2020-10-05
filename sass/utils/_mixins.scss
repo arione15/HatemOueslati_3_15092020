@@ -1,0 +1,6 @@
+// Les Mixins
+@mixin headerFooterLocal($hauteur, $largeur, $coulFond) {
+    height: $hauteur;
+    width: $largeur;
+    background-color: $coulFond;
+}

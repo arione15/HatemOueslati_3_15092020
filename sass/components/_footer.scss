@@ -1,0 +1,28 @@
+// footer
+footer {
+    @include headerFooterLocal(12em, 100%, $bgFooter);
+    display: flex;
+    flex-direction: column;
+    color: $text_clair;
+    line-height: 1.7;
+
+    .flexFooter {
+        padding: 1.5em;
+        .suggestResto {
+            display: flex;
+            flex-direction: row; // il faut casser d'abord le flex-direction:column
+            justify-content: start;
+            h4 {
+                margin-left: 0.5em;
+            }
+        }
+        .partner {
+            display: flex;
+            flex-direction: row; // il faut casser d'abord le flex-direction:column
+            align-items: center;
+            h4 {
+                margin-left: 0.5em;
+            }
+        }
+    }
+}

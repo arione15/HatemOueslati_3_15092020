@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "prefix": "postcss css/style.css --use autoprefixer -d css/prefixed/"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.14.1",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "browserslist": "last 4 versions"
   }
 }

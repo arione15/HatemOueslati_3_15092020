@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    font-size: 100%; // pour pouvoir utiliser les em, rem et %
+}
+h1 {
+    font-size: 1.5em;
+    margin-top: 2em;
+}
+h2 {
+    margin: 2em 0 1em 1em;
+    line-height: 1;
+}
+a {
+    text-decoration: none;
+    color: $text_clair;
+    &#gps {
+        color: black;
+    }
+}
+h3, h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+p{
+    font-size: 1em;
+}

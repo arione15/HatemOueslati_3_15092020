@@ -1,0 +1,47 @@
+.restaurants {
+    width: 90%;
+    margin: 0 auto 1.5em auto;
+    padding-bottom: 0.1em;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    position: relative;
+    box-shadow: 2px 8px 2px #d8d8d8;
+    .photo1,
+    .photo2,
+    .photo3,
+    .photo4 {
+        height: 190px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        border-radius: 20px 20px 0 0;
+        margin-bottom: 1em;
+    }
+    .photo1 {
+        background-image: url("/img/restaurants/p1b.jpg");
+    }
+    .photo2 {
+        background-image: url("/img/restaurants/p2b.jpg");
+    }
+    .photo3 {
+        background-image: url("/img/restaurants/p3b.jpg");
+    }
+    .photo4 {
+        background-image: url("/img/restaurants/p4b.jpg");
+    }
+    .new {
+        float: right;
+        padding-top: 0.5em;
+        margin-right: 1em;
+        width: 5.5em;
+        height: 1.8em;
+        text-align: center;
+        vertical-align: middle;
+        background-color: $btn_new;
+        border-radius: 2px;
+        color: $btn_new2;
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+}
