@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Projet 3 page 1</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fontawesome-free-5.14.0-web\css\fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css>
+    <link rel=" stylesheet" href="fontawesome-free-5.14.0-web\css\fontawesome.css">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap"
         rel="stylesheet">
@@ -26,13 +27,15 @@
 
     <!-- Photo du restaurant -->
     <div class="photoP1">
-        <img src="/img/restaurants/p1b.jpg" alt="#" class="responsive">
+        <span class="imgRes" role="img" aria-label="Restaurant 1">
+            <span class="inner"></span>
+        </span>
     </div>
 
     <!-- Main -->
     <div class="main mainPages">
         <div class="notes notes1 notes2">
-            <h2 class="titre">La palette du goût</h2>
+            <h2 class="titre1">La palette du goût</h2>
             <div class="heart1 heart1Pages">
                 <div>
                     <input type="image" src="img/heart-30a.png" alt="#">
@@ -45,63 +48,64 @@
             <div class="three-dishes">
 
                 <!-- 1- Menus Entrées -->
-                <div class="dish">
-                    <p>ENTRÉES</p>
-                    <hr>
-                </div>
-                <div class="restaurants menus" id="e1">
-                    <div class="nomPlat">
-                        <h3>Fricassée d'escargot
+                <div class="entrees">
+                    <div class="dish">
+                        <p>ENTRÉES</p>
+                        <hr>
+                    </div>
+                    <div class="restaurants menus" id="e1">
+                        <div class="nomPlat">
+                            <h3>Fricassée d'escargot
 
-                        </h3>
-                        <p>Au piment d'Espelette</p>
+                            </h3>
+                            <p>Au piment d'Espelette</p>
+                        </div>
+
+                        <div class="prix">
+                            <p>25€</p>
+                        </div>
+                        <div class="box">
+                            <div class="check">
+
+                                <img src="img/check24.png" alt="#">
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="prix">
-                        <p>25€</p>
-                    </div>
-                    <div class="box">
-                        <div class="check">
+                    <div class="restaurants menus" id="e2">
+                        <div class="nomPlat">
+                            <h3>Foie gras de canard mi-cuit
 
-                            <img src="img/check24.png" alt="#">
+
+                            </h3>
+                            <p>Et ses copeaux de truffe noire</p>
+                        </div>
+                        <div class="prix">
+                            <p>35€</p>
+                        </div>
+                        <div class="box">
+                            <div class="check">
+                                <img src="img/check24.png" alt="#">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="restaurants menus" id="e3">
+                        <div class="nomPlat">
+                            <h3>Oeuf au plat</h3>
+                            <p>Assaisonné à la truffe sur lit de caviar</p>
+                        </div>
+                        <div class="prix">
+                            <p>20€</p>
+                        </div>
+                        <div class="box">
+                            <div class="check">
+                                <img src="img/check24.png" alt="#">
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="restaurants menus" id="e2">
-                    <div class="nomPlat">
-                        <h3>Foie gras de canard mi-cuit
-
-
-                        </h3>
-                        <p>Et ses copeaux de truffe noire</p>
-                    </div>
-                    <div class="prix">
-                        <p>35€</p>
-                    </div>
-                    <div class="box">
-                        <div class="check">
-                            <img src="img/check24.png" alt="#">
-                        </div>
-                    </div>
-                </div>
-                <div class="restaurants menus" id="e3">
-                    <div class="nomPlat">
-                        <h3>Oeuf au plat</h3>
-                        <p>Assaisonné à la truffe sur lit de caviar</p>
-                    </div>
-                    <div class="prix">
-                        <p>20€</p>
-                    </div>
-                    <div class="box">
-                        <div class="check">
-                            <img src="img/check24.png" alt="#">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2 Menu Plats -->
-
+            <!-- 2 Menu Plats -->
+            <div class="plats">
                 <div class="dish">
                     <p>PLATS</p>
                     <hr>
@@ -154,9 +158,9 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- 3- Menu Desserts -->
-
+            </div>
+            <!-- 3- Menu Desserts -->
+            <div class="desserts">
                 <div class="dish">
                     <p>DESSERTS</p>
                     <hr>
@@ -206,19 +210,20 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <!-- bouton order -->
 
-            <!-- bouton order -->
-
-            <div class="explorer">
-                <div class="vue">
-                    <p><a href="#">Commander</a></p>
-                </div>
+        <div class="explorer">
+            <div class="vue">
+                <p><a class="btnPrincipal" href="#">Commander</a></p>
             </div>
-
         </div>
 
     </div>
+
+    </div>
+
     <!-- Bas de Page -->
 
     <footer>

@@ -1,13 +1,16 @@
 .restaurants,
 .order,
 .dish {
-    // transition: transform background-color 10s;
+// transition: transform background-color 10s;
     transition: all 450ms;
     &:hover {
         background-color: $text_clair;
         box-shadow: 2px 10px 2px grey;
     }
 }
+
+
+// animation loader
 @keyframes loadBar {
     0% {
         transform: scaleX(0);
@@ -16,6 +19,7 @@
         transform: scaleX(1);
     }
 }
+
 @keyframes mvtBoule {
     0% {
         margin-left: 0%;

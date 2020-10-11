@@ -15,142 +15,177 @@
 @import "./components/zonePhotoRestaurant";
 @import "./components/etapeModeEmploi";
 @import "./components/avisRestaurant";
-
-
-.main {
-    display: flex;
-    flex-direction: column;
-}
-.mainPages{
-    margin-top: 13em;
-       }
-// Main 1 - Introduction : Vues sur les restos, manuel d'utilisation
-.explorer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 3em;
-    background-color: $nuance_gris2;
-    .welcome {
-        padding: 0 4em;
-        & p {
-            color: #696969;
-            font-size: 1em;
-        }
-    }
-    .vue a {
-        display: block; // pour pouvoir lui donne un width
-        background-color: $btn_principaux;
-        border-radius: 5em;
-        padding: 1em 3.5em;
-        list-style-type: none;
-        text-decoration: none;
-        text-align: center;
-        color: #fff;
-        --box-shadow-color:#d8d8d8;
-        box-shadow: 2px 8px 2px var(--box-shadow-color);
-        background: linear-gradient(-45deg, $btn_principaux, pink);
-        &:hover{
-            background: lighten($btn_principaux, 20%);
-            --box-shadow-color: #696969;
-        }
-    }
-}
+@import "./components/trait";
+@import "./components/boutonPrincipal";
+@import "./components/explorerBtnPrincipal";
 
 // Main 2
 .booking {
-    margin-bottom: 2.5em;
+  margin-bottom: 2.5em;
+  @media screen and(min-width:768px) and(max-width:992px) {
+    //margin-top: 0em;
+    padding-bottom: 0.5em;
+  }
 }
 // avis restaurants
 .notes1 {
-    border-radius: 3em 3em 0 0;
-    z-index: 10;
-    margin-top: -2em;
-    h2 {
-        font-family: "Shrikhand", cursive;
-        font-size: 1.7em;
-        margin-top: 1.5em;
-    }
-    p,
-    hr {
-        margin-left: 1.5em;
-        margin-bottom: 0;
-    }
+  border-radius: 3em 3em 0 0;
+  z-index: 10;
+  margin-top: -2em;
+  h2 {
+    font-family: "Shrikhand", cursive;
+    font-size: 1.7em;
+    margin-top: 1.5em;
+  }
+  p,
+  hr {
+    margin-left: 1.5em;
+    margin-bottom: 0;
+  }
+}
+@media screen and(min-width:768px) and(max-width:992px) {
+  .mainPages {
+    margin-top: 0em;
+    padding-top: 0em;
+  }
 }
 .notes,
 .notes1 {
-    background-color: $nuance_gris2;
-    padding-bottom: 2.5em;
-    .restaurants {
-        width: 90%;
-        margin: 0 auto 1.5em auto;
-        padding-bottom: 0.1em;
-        background-color: white;
-        border-radius: 20px 20px 20px 20px;
-        position: relative;
-        box-shadow: 2px 8px 2px #d8d8d8;
-        .photo1,
-        .photo2,
-        .photo3,
-        .photo4 {
-            height: 190px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-            border-radius: 20px 20px 0 0;
-            margin-bottom: 1em;
-        }
-        .photo1 {
-            background-image: url("/img/restaurants/p1b.jpg");
-        }
-        .photo2 {
-            background-image: url("/img/restaurants/p2b.jpg");
-        }
-        .photo3 {
-            background-image: url("/img/restaurants/p3b.jpg");
-        }
-        .photo4 {
-            background-image: url("/img/restaurants/p4b.jpg");
-        }
-        .new {
-            float: right;
-            padding-top: 0.5em;
-            margin-right: 1em;
-            width: 5.5em;
-            height: 1.8em;
-            text-align: center;
-            vertical-align: middle;
-            background-color: $btn_new;
-            border-radius: 2px;
-            color: $btn_new2;
-            font-size: 0.8em;
-            font-weight: 600;
-        }
+  background-color: $nuance_gris2;
+  padding-bottom: 2.5em;
+  margin-top: -3em;
+  @media screen and(min-width:993px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @media screen and(min-width:768px) and(max-width:992px) {
+    margin-top: 1em;
+  }
+}
+.titre {
+  @media screen and(min-width:768px) and(max-width:992px) {
+    margin-top: 17em;
+  }
+  @media screen and(min-width:993px) {
+    width: 100%;
+    align-self: flex-start;
+  }
+}
+.titre1 {
+  @media screen and(min-width:768px) and(max-width:992px) {
+    margin-top: -1.5em;
+  }
+  @media screen and(min-width:993px) {
+    width: 100%;
+    //margin-top: 2em;
+  }
+}
+
+.restaurants {
+  width: 80%;
+  margin: 0 auto 1.5em auto;
+  padding-bottom: 0.1em;
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+  position: relative;
+  box-shadow: 2px 8px 2px$nuance_gris3;
+  transition: box-shadow 500ms ease-in-out;
+  &:hover {
+    box-shadow: 2px 8px 2px darken($nuance_gris3, 10%);
+    cursor: pointer;
+  }
+
+  @media screen and(min-width:993px) {
+    margin: 0.5em auto 0.5em;
+    width: 40%;
+
+    p {
+      font-size: 0.8em;
     }
+    h3 {
+      font-size: 1em;
+    }
+  }
+
+  @media screen and(min-width:768px) and(max-width:992px) {
+    .nom h3 {
+      padding-top: 0.5em;
+    }
+  }
+
+  .photo1,
+  .photo2,
+  .photo3,
+  .photo4 {
+    height: 10em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 1em;
+    @media screen and(min-width:768px) and(max-width:992px) {
+      height: 20em;
+      text-align: center;
+      margin: auto;
+    }
+  }
+  .photo1 {
+    background-image: url(/img/restaurants/p1.jpg);
+  }
+  .photo2 {
+    background-image: url(/img/restaurants/p2.jpg);
+  }
+  .photo3 {
+    background-image: url(/img/restaurants/p3.jpg);
+  }
+  .photo4 {
+    background-image: url(/img/restaurants/p4.jpg);
+  }
+
+  .new {
+    float: right;
+    padding-top: 0.5em;
+    margin-right: 1em;
+    width: 5.5em;
+    height: 1.8em;
+    text-align: center;
+    vertical-align: middle;
+    background-color: $btn_new;
+    border-radius: 2px;
+    color: $btn_new2;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
 }
 .dish {
-    margin-top: 2.5em;
-    margin-bottom: 1em;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
 }
+
 .three-dishes {
-    margin-bottom: 3em;
+  margin-bottom: 3em;
+  @media screen and(min-width:993px) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and(min-width:993px) {
+  .entrees,
+  .plats,
+  .desserts {
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 .nom {
-    margin-left: 1em;
-    p {
-        margin-top: 0.3em;
-    }
-}
-hr {
-    background-color: $btn_new;
-    height: 3px;
-    width: 12%;
-    text-align: left;
-    margin-bottom: 4em;
-    border: none;
-}
-.logo {
-    padding-bottom: 0.5em;
+  margin-left: 1em;
+  p {
+    margin-top: 0.3em;
+  }
 }
