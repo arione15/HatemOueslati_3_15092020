@@ -7,7 +7,6 @@
 @import "./components/geolocalisation";
 @import "./components/footer";
 @import "./components/animCoeur";
-@import "./components/animRestaurants";
 @import "./components/animMenus";
 @import "./components/animValider";
 @import "./components/queryPC";
@@ -18,6 +17,7 @@
 @import "./components/trait";
 @import "./components/boutonPrincipal";
 @import "./components/explorerBtnPrincipal";
+@import "./components/new";
 
 // Main 2
 .booking {
@@ -25,6 +25,11 @@
   @media screen and(min-width:768px) and(max-width:992px) {
     //margin-top: 0em;
     padding-bottom: 0.5em;
+  }
+  h2 {
+    @media screen and(min-width:993px) {
+      margin-top: 1em;
+    }
   }
 }
 // avis restaurants
@@ -45,7 +50,7 @@
 }
 @media screen and(min-width:768px) and(max-width:992px) {
   .mainPages {
-    margin-top: 0em;
+    margin-top: -4em;
     padding-top: 0em;
   }
 }
@@ -63,6 +68,11 @@
     margin-top: 1em;
   }
 }
+.notes1 {
+  @media screen and(min-width:768px) and(max-width:992px) {
+    padding-top: 0em;
+  }
+}
 .titre {
   @media screen and(min-width:768px) and(max-width:992px) {
     margin-top: 17em;
@@ -70,6 +80,7 @@
   @media screen and(min-width:993px) {
     width: 100%;
     align-self: flex-start;
+    margin-top: 1em;
   }
 }
 .titre1 {
@@ -83,6 +94,17 @@
 }
 
 .restaurants {
+  @media screen and(min-width:993px) {
+    margin: 0.5em auto 0.5em;
+    width: 40%;
+
+    p {
+      font-size: 0.8em;
+    }
+    h3 {
+      font-size: 1em;
+    }
+  }
   width: 80%;
   margin: 0 auto 1.5em auto;
   padding-bottom: 0.1em;
@@ -94,18 +116,6 @@
   &:hover {
     box-shadow: 2px 8px 2px darken($nuance_gris3, 10%);
     cursor: pointer;
-  }
-
-  @media screen and(min-width:993px) {
-    margin: 0.5em auto 0.5em;
-    width: 40%;
-
-    p {
-      font-size: 0.8em;
-    }
-    h3 {
-      font-size: 1em;
-    }
   }
 
   @media screen and(min-width:768px) and(max-width:992px) {
@@ -143,25 +153,18 @@
   .photo4 {
     background-image: url(/img/restaurants/p4.jpg);
   }
-
-  .new {
-    float: right;
-    padding-top: 0.5em;
-    margin-right: 1em;
-    width: 5.5em;
-    height: 1.8em;
-    text-align: center;
-    vertical-align: middle;
-    background-color: $btn_new;
-    border-radius: 2px;
-    color: $btn_new2;
-    font-size: 0.8em;
-    font-weight: 600;
-  }
 }
+
 .dish {
   margin-top: 2.5em;
   margin-bottom: 1em;
+  @media screen and(min-width:993px) {
+    margin-left: 1em;
+    //font-weight:600 ;
+    /* hr{
+      display: none;
+    } */
+  }
 }
 
 .three-dishes {
@@ -175,13 +178,18 @@
   .entrees,
   .plats,
   .desserts {
-    width: 30%;
+    width: 35%;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    font-size: 0.8em;
+    .menus{
+      margin: 0;
+    }
   }
+
 }
 .nom {
   margin-left: 1em;

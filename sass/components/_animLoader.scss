@@ -1,0 +1,23 @@
+
+
+// animation loader
+@keyframes loadBar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes mvtBoule {
+  0% {
+    margin-left: 0%;
+    opacity: 1;
+  }
+
+  100% {
+    margin-left: 80%;
+    opacity: 0.8;
+  }
+}
