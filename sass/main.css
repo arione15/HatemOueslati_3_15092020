@@ -288,7 +288,7 @@ footer .flexFooter .partner h4 {
 
 @media screen and (min-width: 993px) {
   .heart1Pages {
-    margin-top: 22.5em;
+    margin-top: 26em;
   }
 }
 
@@ -848,7 +848,7 @@ hr {
 
 .notes1 p,
 .notes1 hr {
-  margin-left: 1em;
+  margin-left: 1.5em;
   margin-bottom: 0;
 }
 
@@ -872,8 +872,10 @@ hr {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
@@ -1023,6 +1025,10 @@ hr {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
@@ -1033,6 +1039,10 @@ hr {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .three-dishesGE .entrees,
   .three-dishesGE .plats,

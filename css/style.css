@@ -169,7 +169,7 @@ footer {
       margin-top: 17.5em; } }
   @media screen and (min-width: 993px) {
     .heart1Pages {
-      margin-top: 22.5em; } }
+      margin-top: 26em; } }
 
 /* Animation à l'affichage de la page de menus : les menus apparaissent peit à petit*/
 @keyframes affichageMenus {
@@ -538,7 +538,7 @@ hr {
     margin-top: 1.5em; }
   .notes1 p,
   .notes1 hr {
-    margin-left: 1em;
+    margin-left: 1.5em;
     margin-bottom: 0; }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -555,7 +555,7 @@ hr {
     .notes,
     .notes1 {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       justify-content: space-around; } }
   @media screen and (min-width: 768px) and (max-width: 992px) {
     .notes,
@@ -651,11 +651,13 @@ hr {
   @media screen and (min-width: 993px) {
     .three-dishes {
       display: flex;
+      flex-direction: column;
       justify-content: space-around; } }
 
 @media screen and (min-width: 993px) {
   .three-dishesGE {
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
     .three-dishesGE .entrees,
     .three-dishesGE .plats,
     .three-dishesGE .desserts {
