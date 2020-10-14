@@ -1,19 +1,27 @@
 {
   "name": "monprojet3",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
+    "sass": "sass --watch ./sass/main.scss : ./css/style.css",
     "compile:sass": "node-sass sass/main.scss css/style.css -w",
     "prefix": "postcss css/style.css --use autoprefixer -d css/prefixed/"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browserslist": "last 4 versions",
     "node-sass": "^4.14.1",
-    "nodemon": "^2.0.4",
-    "browserslist": "last 4 versions"
-  }
- 
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arione15/HatemOueslati_3_15092020.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arione15/HatemOueslati_3_15092020/issues"
+  },
+  "homepage": "https://github.com/arione15/HatemOueslati_3_15092020#readme",
+  "description": ""
 }
-

@@ -1,36 +1,109 @@
 .etape {
-    position: relative;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 0.5em 0.5em;
-    background-color: $nuance_gris2;
-    width: 80%;
-    margin: 1.8em 2em;
-    height: 3.5em;
-    border-radius: 1.2em;
-    box-shadow: 2px 8px 2px $nuance_gris3;
-    transform: scale(1);
-    transition: transform 500ms ease-in-out;
-    & :last-child {
-        margin-left: 1em;
-        font-weight: 600;
-    }
-    span {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0.5em 0.5em;
+  background-color: $nuance_gris2;
+  width: 80%;
+  margin: 1.8em 2em;
+  height: 3.5em;
+  border-radius: 1.2em;
+  box-shadow: 2px 8px 15px $nuance_gris3;
+  transform: scale(1);
+  transition: transform 500ms ease-in-out;
+  .fa-mobile-alt,
+  .fa-list-ul,
+  .fa-hamburger {
+    color: $nuance_gris4;
+    font-size: 25px;
+  }
+
+  & :last-child,
+  :nth-child(2) {
+    margin-left: 1.5em;
+    font-weight: 600;
+  }
+  span {
+    display: block;
+    position: absolute;
+    top: calc(50% - 12px);
+    left: -10px;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: $btn_principaux;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+  }
+  &:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+}
+
+// Main 2
+.booking {
+  margin-bottom: 2.5em;
+  @media screen and(min-width:768px) and(max-width:992px) {
+    //margin-top: 0em;
+    padding-bottom: 0.5em;
+    .etape {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 7em;
+      p {
+        font-size: 1em;
+      }
+      i {
+        margin-left: -0.3em;
+      }
+      span {
         display: block;
         position: absolute;
-        top: 20px;
-        left: -10px;
+        top: -10px;
+        left: calc(50% - 14px);
         width: 1.5em;
         height: 1.5em;
         background-color: $btn_principaux;
         border-radius: 50%;
         text-align: center;
         color: white;
+      }
     }
-    &:hover{
-        transform: scale(1.02);
-        cursor: pointer;
+  }
+  h2 {
+    @media screen and(min-width:993px) {
+      margin-top: 1em;
+    }
+  }
+}
 
+@media screen and(min-width:993px) {
+  .modeEmploi {
+    display: flex;
+    .etape {
+      //position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 6em;
+      & > * {
+        margin: auto;
+      }
+      span {
+        display: block;
+        position: absolute;
+        top: -10px;
+        left: calc(50% - 10px);
+        width: 1.5em;
+        height: 1.5em;
+        background-color: $btn_principaux;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+      }
     }
+  }
 }

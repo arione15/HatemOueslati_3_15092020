@@ -5,46 +5,57 @@
 /***********************************************/
 
 .nomPlat {
-    flex-grow: 1;
-    width: 60%;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    p, h3 {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      margin-top: 0;
-      margin-left: 1em;
-      line-height: 1.5;
-    }
-  }
-  .prix {
-   width: 20%;
-    margin-top: 1em;
-  }
-  .box {
-    display: flex;
-    width: 0;
-    transition: all 1s ease-in-out;
-    background-color: $btn_new;
-    border-radius: 0 20px 20px 0;
-    color: $btn_new2;
-    .check {
-      margin: auto;
-      transition: transform 1s;
-      transform: rotate(0deg);
-    }
-  }
-  .menus {
-    display: flex;
-    width: 80%;
-    margin: auto;
+  flex-grow: 1;
+  width: 60%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  p,
+  h3 {
     overflow: hidden;
-    cursor: pointer;
-    &:hover > .box {
-      width: 20%;
-      .check {
-        transform: rotate(360deg);
-      }
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 0;
+    margin-left: 1em;
+    line-height: 1.5;
+  }
+}
+.prix {
+  width: 20%;
+  margin-top: 1em;
+}
+.box {
+  display: flex;
+  width: 0.0000001%; // Un tour de magie personnel !!!
+  transition: all 1s ease-in-out;
+  background-color: $btn_new;
+  color: $btn_new;
+
+  .check {
+    margin: auto;
+    transition: transform 1s;
+    transform: rotate(0deg);
+    background-color: $btn_new;
+    border-radius: 50%;
+    .fa-check-circle {
+      border-radius: 50%;
+      border: none;
+      background-color: white;
     }
   }
+}
+.menus {
+  background-color: white;
+
+  display: flex;
+  width: 80%;
+  margin: 0 auto 1em;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover > .box {
+    width: 20%;
+    .check {
+      transform: rotate(360deg);
+    }
+  }
+}

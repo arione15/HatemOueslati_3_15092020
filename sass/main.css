@@ -1,3 +1,1062 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+}
 
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 
+.mainPages {
+  margin-top: 0em;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-top: 2em;
+}
+
+h2 {
+  margin: 2em 0 1em 1em;
+  line-height: 1;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  h2 {
+    padding-bottom: .5em;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a#gps {
+  color: black;
+}
+
+h3, h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 1em;
+}
+
+#fleche {
+  position: absolute;
+  left: 1.5em;
+  display: block;
+  width: 1em;
+  padding-top: 0.5em;
+  padding-left: 2em;
+}
+
+/* Loader */
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: #99e2d0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader .tube {
+  width: 30%;
+  height: 4%;
+  margin-bottom: 20px;
+  border: solid 2px #f6f6f6;
+  background-color: #ff79da;
+  border-radius: 2;
+  -webkit-animation: loadBar 1s 100ms ease-in-out 3 alternate both;
+          animation: loadBar 1s 100ms ease-in-out 3 alternate both;
+}
+
+.loader .tube-1 {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.loader .tube-2 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.loader .tube-3 {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.loader .tube-4 {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+
+.loader .tube .boule {
+  display: block;
+  margin-top: 5px;
+  width: 15%;
+  height: 75%;
+  background-color: #139274;
+  border-radius: 50%;
+  margin-left: 20%;
+  -webkit-animation: mvtBoule 1s 100ms ease-in-out 4 alternate both;
+          animation: mvtBoule 1s 100ms ease-in-out 4 alternate both;
+}
+
+.loader .tube .boule-1 {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.loader .tube .boule-2 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+
+.loader .tube .boule-3 {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+
+.loader .tube .boule-4 {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+}
+
+.flexHeader {
+  height: 1em;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 2em 0 2em;
+}
+
+.locate {
+  height: 3em;
+  width: 100%;
+  background-color: #eaeaea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 4px solid #d8d8d8;
+  border-radius: 3px;
+}
+
+.locate img {
+  margin-right: 1em;
+}
+
+footer {
+  height: 12em;
+  width: 100%;
+  background-color: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  line-height: 1.7;
+}
+
+footer .flexFooter {
+  padding: 1.5em;
+}
+
+footer .flexFooter .suggestResto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+footer .flexFooter .suggestResto h4 {
+  margin-left: 0.5em;
+}
+
+footer .flexFooter .partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .flexFooter .partner h4 {
+  margin-left: 0.5em;
+  font-weight: 100;
+}
+
+.fa-heart.fas {
+  color: #9356dc;
+  font-size: 1.5em;
+}
+
+.fa-heart.far {
+  color: #353535;
+  font-size: 1.5em;
+}
+
+.heart1 {
+  position: absolute;
+  top: 11.5em;
+  right: 2em;
+  height: 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .heart1 {
+    margin-top: 10em;
+  }
+}
+
+.heart1:hover .heart2 {
+  height: 30px;
+}
+
+.heart2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: height 0.4s ease;
+  transition: height 0.4s ease;
+  height: 0;
+  overflow: hidden;
+}
+
+.heart1Pages {
+  top: 22em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .heart1Pages {
+    margin-top: 17.5em;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .heart1Pages {
+    margin-top: 22.5em;
+  }
+}
+
+/* Animation à l'affichage de la page de menus : les menus apparaissent peit à petit*/
+@-webkit-keyframes affichageMenus {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes affichageMenus {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#e1 {
+  -webkit-animation: affichageMenus 1s ease-out 0s 1;
+          animation: affichageMenus 1s ease-out 0s 1;
+  -webkit-animation-duration: 2s 4s;
+          animation-duration: 2s 4s;
+}
+
+#e2 {
+  -webkit-animation: affichageMenus 2s ease-out 0s 1;
+          animation: affichageMenus 2s ease-out 0s 1;
+  -webkit-animation-duration: 2s 4s;
+          animation-duration: 2s 4s;
+}
+
+#e3 {
+  -webkit-animation: affichageMenus 3s ease-out 0s 1;
+          animation: affichageMenus 3s ease-out 0s 1;
+  -webkit-animation-duration: 2s 4s;
+          animation-duration: 2s 4s;
+}
+
+#p1 {
+  -webkit-animation: affichageMenus 4s ease-out 0s 1;
+          animation: affichageMenus 4s ease-out 0s 1;
+  -webkit-animation-duration: 2s 4s;
+          animation-duration: 2s 4s;
+}
+
+#p2 {
+  -webkit-animation: affichageMenus 5s ease-out 0s 1;
+          animation: affichageMenus 5s ease-out 0s 1;
+  -webkit-animation-duration: 2s 4s;
+          animation-duration: 2s 4s;
+}
+
+#p3 {
+  -webkit-animation: affichageMenus 6s ease-out 0s 1;
+          animation: affichageMenus 6s ease-out 0s 1;
+  -webkit-animation-duration: 2s 4s;
+          animation-duration: 2s 4s;
+}
+
+#d1 {
+  -webkit-animation: affichageMenus 7s ease-out 0s 1;
+          animation: affichageMenus 7s ease-out 0s 1;
+  -webkit-animation-duration: 2s 4s;
+          animation-duration: 2s 4s;
+}
+
+#d2 {
+  -webkit-animation: affichageMenus 8s ease-out 0s 1;
+          animation: affichageMenus 8s ease-out 0s 1;
+  -webkit-animation-duration: 2s 4s;
+          animation-duration: 2s 4s;
+}
+
+#d3 {
+  -webkit-animation: affichageMenus 9s ease-out 0s 1;
+          animation: affichageMenus 9s ease-out 0s 1;
+  -webkit-animation-duration: 2s 4s;
+          animation-duration: 2s 4s;
+}
+
+/***********************************************/
+/***********************************************/
+/* Animation bouton check et texte tronqué*/
+/***********************************************/
+/***********************************************/
+.nomPlat {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 60%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.nomPlat p,
+.nomPlat h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0;
+  margin-left: 1em;
+  line-height: 1.5;
+}
+
+.prix {
+  width: 20%;
+  margin-top: 1em;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 0.0000001%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  background-color: #99e2d0;
+  color: #99e2d0;
+}
+
+.box .check {
+  margin: auto;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  background-color: #99e2d0;
+  border-radius: 50%;
+}
+
+.box .check .fa-check-circle {
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+}
+
+.menus {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: 0 auto 1em;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.menus:hover > .box {
+  width: 20%;
+}
+
+.menus:hover > .box .check {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+@media screen and (min-width: 993px) {
+  .modeEmploi {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-bottom: 5em;
+  }
+  .modeEmploi .etape {
+    margin: auto;
+    width: 25%;
+  }
+  .modeEmploi .etape span {
+    top: -10px;
+    left: 130px;
+  }
+  .modeEmploi .etape p {
+    font-size: 1em;
+    white-space: nowrap;
+  }
+  .responsive {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .heart1Pages {
+    position: absolute;
+    top: 24em;
+    right: 3em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .modeEmploi {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .modeEmploi .etape {
+    margin: auto;
+    width: 25%;
+  }
+  .modeEmploi .etape span {
+    top: -.9em;
+    left: 5.5em;
+  }
+  .modeEmploi .etape p {
+    font-size: .8em;
+    white-space: nowrap;
+    margin: 0 .5em 0 0;
+  }
+  .responsive {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .notes1 {
+    margin-top: 6em;
+  }
+  .heart1Pages {
+    position: absolute;
+    top: 19em;
+    right: 3em;
+  }
+  .notes2 {
+    margin-top: 5em;
+    padding-top: 5em;
+  }
+  .notes2 .titre {
+    position: absolute;
+    top: 10em;
+  }
+  .notes2 .restaurants {
+    width: 80%;
+  }
+}
+
+.photoP1 .imgRes {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url(/img/restaurants/p1.jpg);
+  border-radius: 10px;
+}
+
+.photoP1 .imgRes .inner {
+  padding-top: 66.68%;
+  /* height/width of image */
+  display: block;
+  height: 0;
+}
+
+.photoP2 .imgRes {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url(/img/restaurants/p2.jpg);
+  border-radius: 10px;
+}
+
+.photoP2 .imgRes .inner {
+  padding-top: 66.68%;
+  /* height/width of image */
+  display: block;
+  height: 0;
+}
+
+.photoP3 .imgRes {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url(/img/restaurants/p3.jpg);
+  border-radius: 10px;
+}
+
+.photoP3 .imgRes .inner {
+  padding-top: 66.68%;
+  /* height/width of image */
+  display: block;
+  height: 0;
+}
+
+.photoP4 .imgRes {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url(/img/restaurants/p4.jpg);
+  border-radius: 10px;
+}
+
+.photoP4 .imgRes .inner {
+  padding-top: 66.68%;
+  /* height/width of image */
+  display: block;
+  height: 0;
+}
+
+.etape {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em 0.5em;
+  background-color: #f6f6f6;
+  width: 80%;
+  margin: 1.8em 2em;
+  height: 3.5em;
+  border-radius: 1.2em;
+  -webkit-box-shadow: 2px 8px 15px #d8d8d8;
+          box-shadow: 2px 8px 15px #d8d8d8;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.etape .fa-mobile-alt,
+.etape .fa-list-ul,
+.etape .fa-hamburger {
+  color: #7e7e7e;
+  font-size: 25px;
+}
+
+.etape :last-child,
+.etape :nth-child(2) {
+  margin-left: 1.5em;
+  font-weight: 600;
+}
+
+.etape span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 12px);
+  left: -10px;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #9356dc;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+}
+
+.etape:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  cursor: pointer;
+}
+
+.booking {
+  margin-bottom: 2.5em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .booking {
+    padding-bottom: 0.5em;
+  }
+  .booking .etape {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 7em;
+  }
+  .booking .etape p {
+    font-size: 1em;
+  }
+  .booking .etape i {
+    margin-left: -0.3em;
+  }
+  .booking .etape span {
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 14px);
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #9356dc;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .booking h2 {
+    margin-top: 1em;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .modeEmploi {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .modeEmploi .etape {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 6em;
+  }
+  .modeEmploi .etape > * {
+    margin: auto;
+  }
+  .modeEmploi .etape span {
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 10px);
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #9356dc;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+  }
+}
+
+hr {
+  background-color: #99e2d0;
+  height: 3px;
+  width: 12%;
+  text-align: left;
+  margin-bottom: 4em;
+  border: none;
+}
+
+.btnPrincipal {
+  display: block;
+  background-color: #9356dc;
+  border-radius: 5em;
+  padding: 1em 3.5em;
+  list-style-type: none;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(-10deg, #9356dc, #ff79da);
+  -webkit-transition: background-color 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
+  -webkit-box-shadow: 0px 10px 16px -3px rgba(0, 0, 0, 0.17);
+          box-shadow: 0px 10px 16px -3px rgba(0, 0, 0, 0.17);
+  -webkit-transition: -webkit-box-shadow 500ms ease-in-out;
+  transition: -webkit-box-shadow 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out, -webkit-box-shadow 500ms ease-in-out;
+}
+
+.btnPrincipal:hover {
+  background: linear-gradient(-10deg, #a16be0, #ff93e1);
+  -webkit-box-shadow: 0px 10px 16px -3px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 10px 16px -3px rgba(0, 0, 0, 0.8);
+}
+
+.explorer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-bottom: 3em;
+  background-color: #f6f6f6;
+}
+
+.explorer .welcome {
+  padding: 0 4em;
+}
+
+.explorer .welcome p {
+  color: #696969;
+  margin: auto;
+}
+
+.new {
+  float: right;
+  padding-top: 0.5em;
+  margin-right: 1em;
+  width: 5.5em;
+  height: 1.8em;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #99e2d0;
+  border-radius: 2px;
+  color: #139274;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.notes1 {
+  border-radius: 3em 3em 0 0;
+  z-index: 10;
+  margin-top: -2em;
+}
+
+.notes1 h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7em;
+  margin-top: 1.5em;
+}
+
+.notes1 p,
+.notes1 hr {
+  margin-left: 1em;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .mainPages {
+    margin-top: -4em;
+    padding-top: 0em;
+  }
+}
+
+.notes,
+.notes1 {
+  background-color: #f6f6f6;
+  padding-bottom: 2.5em;
+  margin-top: -3em;
+}
+
+@media screen and (min-width: 993px) {
+  .notes,
+  .notes1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .notes,
+  .notes1 {
+    margin-top: 1em;
+    padding-top: 6em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .notes1 {
+    padding-top: 0em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .titre {
+    margin-top: 21em;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .titre {
+    width: 100%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 1em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .titre1 {
+    margin-top: -1.5em;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .titre1 {
+    width: 100%;
+  }
+}
+
+.restaurants {
+  width: 80%;
+  margin: 0 auto 1.5em auto;
+  padding-bottom: 0.1em;
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+  position: relative;
+  -webkit-box-shadow: 2px 8px 20px #d8d8d8;
+          box-shadow: 2px 8px 20px #d8d8d8;
+  -webkit-transition: -webkit-box-shadow 500ms ease-in-out;
+  transition: -webkit-box-shadow 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out, -webkit-box-shadow 500ms ease-in-out;
+}
+
+@media screen and (min-width: 993px) {
+  .restaurants {
+    margin: 0.5em auto 0.5em;
+    width: 40%;
+  }
+  .restaurants p {
+    font-size: 0.8em;
+  }
+  .restaurants h3 {
+    font-size: 1em;
+  }
+}
+
+.restaurants:hover {
+  -webkit-box-shadow: 2px 8px 20px #a5a5a5;
+          box-shadow: 2px 8px 20px #a5a5a5;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .restaurants .nom h3 {
+    padding-top: 0.5em;
+  }
+}
+
+.restaurants .photo1,
+.restaurants .photo2,
+.restaurants .photo3,
+.restaurants .photo4 {
+  height: 10em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .restaurants .photo1,
+  .restaurants .photo2,
+  .restaurants .photo3,
+  .restaurants .photo4 {
+    height: 20em;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.restaurants .photo1 {
+  background-image: url(/img/restaurants/p1.jpg);
+}
+
+.restaurants .photo2 {
+  background-image: url(/img/restaurants/p2.jpg);
+}
+
+.restaurants .photo3 {
+  background-image: url(/img/restaurants/p3.jpg);
+}
+
+.restaurants .photo4 {
+  background-image: url(/img/restaurants/p4.jpg);
+}
+
+.dish {
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 993px) {
+  .dish {
+    margin-left: 1em;
+    /* hr{
+      display: none;
+    } */
+  }
+}
+
+.three-dishes {
+  margin-bottom: 3em;
+}
+
+@media screen and (min-width: 993px) {
+  .three-dishes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .three-dishesGE {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .three-dishesGE .entrees,
+  .three-dishesGE .plats,
+  .three-dishesGE .desserts {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 0.8em;
+  }
+}
+
+.nom {
+  margin-left: 1em;
+}
+
+.nom p {
+  margin-top: 0.3em;
+}
 /*# sourceMappingURL=main.css.map */
