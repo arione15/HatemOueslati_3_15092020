@@ -1,12 +1,14 @@
 // geolocalisalisation
 .locate {
-    @include headerFooterLocal(3em, 100%, $nuance_gris);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 4px solid $nuance_gris3;
-    border-radius: 3px;
-    & img {
-        margin-right: 1em;
-    }
+  @include headerFooterLocal(3em, 100%, $nuance_gris);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px solid $nuance_gris3;
+  border-radius: 3px;
+  font-family: "Roboto";
+  padding-bottom: 1em;
+  & img {
+    margin-right: 1em;
+  }
 }

@@ -13,56 +13,76 @@
 @import "./components/queryTablet";
 @import "./components/zonePhotoRestaurant";
 @import "./components/etapeModeEmploi";
-@import "./components/trait";
 @import "./components/boutonPrincipal";
-@import "./components/explorerBtnPrincipal";
+@import "./components/explorer";
 @import "./components/new";
 
-// avis restaurants
-.notes1 {
-  border-radius: 3em 3em 0 0;
-  z-index: 10;
-  margin-top: -2em;
-  h2 {
-    font-family: "Shrikhand", cursive;
-    font-size: 1.7em;
-    margin-top: 1.5em;
-  }
-  p,
-  hr {
-    margin-left: 1.5em;
-    margin-bottom: 0;
-  }
+.radiusPage {
+  border-radius: 50px 50px 0 0;
 }
-@media screen and(min-width:768px) and(max-width:992px) {
-  .mainPages {
-    margin-top: -4em;
-    padding-top: 0em;
-  }
-}
-.notes,
-.notes1 {
+.notes {
+  display: flex;
+  flex-direction: column;
   background-color: $nuance_gris2;
-  padding-bottom: 2.5em;
+  padding-bottom: 3.5em;
   margin-top: -3em;
-  @media screen and(min-width:993px) {
+
+  .nomAvis {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    font-family: "Shrikhand", cursive;
   }
-  @media screen and(min-width:768px) and(max-width:992px) {
-    margin-top: 1em;
-    padding-top: 6em;
+  .troisEnsembles {
+    .three-dishes {
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: column;
+      .dish {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2em; // Pourquoi elle ne s'est pas alignée automatiquement avec .nomAvis et l'encadré .menus ???
+        @media screen and(min-width:768px) and(max-width:992px) {
+          margin-left: 3em;
+        }
+        @media screen and(min-width:993px) {
+          margin-left: 1.5em;
+        }
+      }
+      .menus {
+        width: 90%;
+      }
+    }
+    @media screen and(min-width:993px) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  .tousRestos {
+    @media screen and(min-width:768px) and(max-width:992px) {
+      padding-top: 7em;
+    }
   }
 }
-.notes1 {
-  @media screen and(min-width:768px) and(max-width:992px) {
-    padding-top: 0em;
+.nomResto {
+  margin-left: 1em;
+  p {
+    margin-top: 0.3em;
+    margin-bottom: 1em;
   }
+}
+
+/***********************************************/
+/***********************************************/
+/***********************************************/
+/***********************************************/
+.tousRestos {
+  display: flex;
+  flex-wrap: wrap;
 }
 .titre {
   @media screen and(min-width:768px) and(max-width:992px) {
-    margin-top: 21em;
+    position: absolute;
+    top: 23.5em;
   }
   @media screen and(min-width:993px) {
     width: 100%;
@@ -70,29 +90,8 @@
     margin-top: 1em;
   }
 }
-.titre1 {
-  @media screen and(min-width:768px) and(max-width:992px) {
-    margin-top: -1.5em;
-  }
-  @media screen and(min-width:993px) {
-    width: 100%;
-    //margin-top: 2em;
-  }
-}
-
 .restaurants {
-  @media screen and(min-width:993px) {
-    margin: 0.5em auto 0.5em;
-    width: 40%;
-
-    p {
-      font-size: 0.8em;
-    }
-    h3 {
-      font-size: 1em;
-    }
-  }
-  width: 80%;
+  width: 90%;
   margin: 0 auto 1.5em auto;
   padding-bottom: 0.1em;
   background-color: white;
@@ -104,10 +103,19 @@
     box-shadow: 2px 8px 20px darken($nuance_gris3, 20%);
     cursor: pointer;
   }
-
   @media screen and(min-width:768px) and(max-width:992px) {
-    .nom h3 {
-      padding-top: 0.5em;
+    .nomResto h3 {
+      padding-top: 1.5em;
+    }
+  }
+  @media screen and(min-width:993px) {
+    margin: 0.5em auto 0.5em;
+    width: 40%;
+    p {
+      font-size: 1.2em;
+    }
+    h3 {
+      font-size: 1.8em;
     }
   }
 
@@ -139,47 +147,5 @@
   }
   .photo4 {
     background-image: url(/img/restaurants/p4.jpg);
-  }
-}
-
-.dish {
-  margin-top: 2.5em;
-  margin-bottom: 1em;
-  @media screen and(min-width:993px) {
-    margin-left: 1em;
-    //font-weight:600 ;
-    /* hr{
-      display: none;
-    } */
-  }
-}
-
-.three-dishes {
-  margin-bottom: 3em;
-  @media screen and(min-width:993px) {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-.three-dishesGE {
-  @media screen and(min-width:993px) {
-    display: flex;
-    .entrees,
-    .plats,
-    .desserts {
-      //width: 100%;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      font-size: 0.8em;
-    }
-  }
-}
-.nom {
-  margin-left: 1em;
-  p {
-    margin-top: 0.3em;
   }
 }

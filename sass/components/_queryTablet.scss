@@ -23,12 +23,7 @@
         display: block;
         margin: 0 auto;
         width: 100%;
-        
       }
-    .notes1 {
-       // border-radius: 3em 3em 0 0;
-        margin-top: 6em;
-    }
     .heart1Pages{
         position: absolute;
         top: 19em;
@@ -37,12 +32,17 @@
     .notes2{
         margin-top: 5em;
         padding-top: 5em;
-        .titre{
-            position: absolute;
-            top:10em;
-        }
+       
         .restaurants{
             width:80%;
         }
     }
 }
+
+
+@media screen and(min-width:768px) and(max-width:992px) {
+    .mainPages {
+      margin-top: -4em;
+      padding-top: 0em;
+    }
+  }

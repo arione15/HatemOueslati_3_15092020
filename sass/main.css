@@ -10,7 +10,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "Roboto", sans-serif;
   font-size: 100%;
 }
 
@@ -40,7 +39,7 @@ h2 {
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   h2 {
-    padding-bottom: .5em;
+    padding-bottom: 0.5em;
   }
 }
 
@@ -53,13 +52,25 @@ a#gps {
   color: black;
 }
 
-h3, h4 {
+h3,
+h4 {
   margin-top: 0;
   margin-bottom: 0;
 }
 
 p {
   font-size: 1em;
+  margin-bottom: 0;
+}
+
+hr {
+  background-color: #99e2d0;
+  height: 3px;
+  width: 12%;
+  text-align: left;
+  margin-bottom: 1em;
+  margin-left: 0;
+  border: none;
 }
 
 #fleche {
@@ -249,7 +260,7 @@ footer .flexFooter .partner h4 {
   font-size: 1.5em;
 }
 
-.heart1 {
+.heartAnime {
   position: absolute;
   top: 11.5em;
   right: 2em;
@@ -257,12 +268,12 @@ footer .flexFooter .partner h4 {
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .heart1 {
+  .heartAnime {
     margin-top: 10em;
   }
 }
 
-.heart1:hover .heart2 {
+.heartAnime:hover .heart2 {
   height: 30px;
 }
 
@@ -276,14 +287,18 @@ footer .flexFooter .partner h4 {
   overflow: hidden;
 }
 
+.heartPages {
+  top: 3em;
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .heart1Pages {
+  .heartPages {
     margin-top: 17.5em;
   }
 }
 
 @media screen and (min-width: 993px) {
-  .heart1Pages {
+  .heartPages {
     margin-top: 24em;
   }
 }
@@ -386,7 +401,7 @@ footer .flexFooter .partner h4 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  width: 60%;
+  width: 70%;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
@@ -480,11 +495,6 @@ footer .flexFooter .partner h4 {
     font-size: 1em;
     white-space: nowrap;
   }
-  .responsive {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-  }
   .heart1Pages {
     position: absolute;
     top: 24em;
@@ -521,9 +531,6 @@ footer .flexFooter .partner h4 {
     margin: 0 auto;
     width: 100%;
   }
-  .notes1 {
-    margin-top: 6em;
-  }
   .heart1Pages {
     position: absolute;
     top: 19em;
@@ -533,12 +540,15 @@ footer .flexFooter .partner h4 {
     margin-top: 5em;
     padding-top: 5em;
   }
-  .notes2 .titre {
-    position: absolute;
-    top: 10em;
-  }
   .notes2 .restaurants {
     width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .mainPages {
+    margin-top: -4em;
+    padding-top: 0em;
   }
 }
 
@@ -755,15 +765,6 @@ footer .flexFooter .partner h4 {
   }
 }
 
-hr {
-  background-color: #99e2d0;
-  height: 3px;
-  width: 12%;
-  text-align: left;
-  margin-bottom: 4em;
-  border: none;
-}
-
 .btnPrincipal {
   display: block;
   background-color: #9356dc;
@@ -773,6 +774,11 @@ hr {
   text-decoration: none;
   text-align: center;
   color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+  max-width: 30%;
+  max-height: 10%;
   background: linear-gradient(-10deg, #9356dc, #ff79da);
   -webkit-transition: background-color 500ms ease-in-out;
   transition: background-color 500ms ease-in-out;
@@ -782,6 +788,10 @@ hr {
   transition: -webkit-box-shadow 500ms ease-in-out;
   transition: box-shadow 500ms ease-in-out;
   transition: box-shadow 500ms ease-in-out, -webkit-box-shadow 500ms ease-in-out;
+}
+
+.btnPrincipal p {
+  margin: 0;
 }
 
 .btnPrincipal:hover {
@@ -830,41 +840,110 @@ hr {
   font-weight: 600;
 }
 
-.notes1 {
+/* .notes1 {
   border-radius: 3em 3em 0 0;
   z-index: 10;
   margin-top: -2em;
-}
-
-.notes1 h2 {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.7em;
-  margin-top: 1.5em;
-}
-
-.notes1 p,
-.notes1 hr {
-  margin-left: 1.5em;
-  margin-bottom: 0;
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .mainPages {
-    margin-top: -4em;
-    padding-top: 0em;
+  h2 {
+    font-family: "Shrikhand", cursive;
+    font-size: 1.7em;
+    margin-top: 1.5em;
   }
-}
-
-.notes,
-.notes1 {
-  background-color: #f6f6f6;
+  p,
+  hr {
+    margin-left: 1.5em;
+    margin-bottom: 0;
+  }
+} */
+.notes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: grey;
   padding-bottom: 2.5em;
   margin-top: -3em;
+  border-radius: 3em 3em 0 0;
+}
+
+.notes .nomAvis {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Shrikhand", cursive;
+}
+
+.notes .three-dishes {
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.notes .three-dishes .dish {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 2em;
 }
 
 @media screen and (min-width: 993px) {
-  .notes,
-  .notes1 {
+  .notes .three-dishes .dish {
+    margin-left: 1em;
+  }
+}
+
+.notes .three-dishes .menus {
+  width: 90%;
+}
+
+@media screen and (min-width: 993px) {
+  .notes .three-dishes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .notes .three-dishes .entrees,
+  .notes .three-dishes .plats,
+  .notes .three-dishes .desserts {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .notes {
+    margin-top: 1em;
+    padding-top: 6em;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .notes {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -875,23 +954,30 @@ hr {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .notes,
-  .notes1 {
-    margin-top: 1em;
-    padding-top: 6em;
-  }
+.notes .btnPrincipal {
+  width: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .notes1 {
-    padding-top: 0em;
-  }
+.nomResto {
+  margin-left: 1em;
 }
 
+.nomResto p {
+  margin-top: 0.3em;
+}
+
+/***********************************************/
+/***********************************************/
+/***********************************************/
+/***********************************************/
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .titre {
     margin-top: 21em;
+    position: absolute;
+    top: 10em;
   }
 }
 
@@ -994,65 +1080,5 @@ hr {
 
 .restaurants .photo4 {
   background-image: url(/img/restaurants/p4.jpg);
-}
-
-.dish {
-  margin-top: 2.5em;
-  margin-bottom: 1em;
-}
-
-@media screen and (min-width: 993px) {
-  .dish {
-    margin-left: 1em;
-    /* hr{
-      display: none;
-    } */
-  }
-}
-
-.three-dishes {
-  margin-bottom: 3em;
-}
-
-@media screen and (min-width: 993px) {
-  .three-dishes {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
-@media screen and (min-width: 993px) {
-  .three-dishesGE {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .three-dishesGE .entrees,
-  .three-dishesGE .plats,
-  .three-dishesGE .desserts {
-    margin: 0;
-    padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    font-size: 0.8em;
-  }
-}
-
-.nom {
-  margin-left: 1em;
-}
-
-.nom p {
-  margin-top: 0.3em;
 }
 /*# sourceMappingURL=main.css.map */

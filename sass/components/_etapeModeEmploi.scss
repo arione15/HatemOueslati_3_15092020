@@ -7,22 +7,27 @@
   background-color: $nuance_gris2;
   width: 80%;
   margin: 1.8em 2em;
-  height: 3.5em;
+  height: 4em;
   border-radius: 1.2em;
   box-shadow: 2px 8px 15px $nuance_gris3;
   transform: scale(1);
   transition: transform 500ms ease-in-out;
+
   .fa-mobile-alt,
   .fa-list-ul,
   .fa-hamburger {
     color: $nuance_gris4;
     font-size: 25px;
   }
+  p {
+    margin: 0; // permet de centrer le texte
+  }
 
   & :last-child,
   :nth-child(2) {
     margin-left: 1.5em;
     font-weight: 600;
+    font-size: 1.4em;
   }
   span {
     display: block;
@@ -44,10 +49,10 @@
 
 // Main 2
 .booking {
-  margin-bottom: 2.5em;
+  margin-bottom: 4em;
   @media screen and(min-width:768px) and(max-width:992px) {
     //margin-top: 0em;
-    padding-bottom: 0.5em;
+    padding-bottom: 5em;
     .etape {
       display: flex;
       flex-direction: column;
@@ -103,6 +108,9 @@
         border-radius: 50%;
         text-align: center;
         color: white;
+      }
+      p {
+        font-size: 1.5em;
       }
     }
   }
