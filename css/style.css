@@ -595,7 +595,8 @@ footer {
   @media screen and (min-width: 993px) {
     .notes .troisEnsembles {
       display: flex;
-      justify-content: space-around; } }
+      justify-content: space-around;
+      flex-wrap: wrap; } }
   @media screen and (min-width: 768px) and (max-width: 992px) {
     .notes .tousRestos {
       padding-top: 7em; } }
