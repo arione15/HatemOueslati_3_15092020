@@ -103,6 +103,20 @@ hr {
       .loader .tube .boule-4 {
         animation-delay: 2000ms; }
 
+@keyframes loadBar {
+  0% {
+    transform: scaleX(0); }
+  100% {
+    transform: scaleX(1); } }
+
+@keyframes mvtBoule {
+  0% {
+    margin-left: 0%;
+    opacity: 1; }
+  100% {
+    margin-left: 80%;
+    opacity: 0.8; } }
+
 .flexHeader {
   height: 1em;
   width: 100%;
@@ -158,6 +172,14 @@ footer {
   color: #353535;
   font-size: 1.5em; }
 
+.heart2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: height 0.4s ease;
+  height: 0;
+  overflow: hidden; }
+
 .heartAnime {
   position: absolute;
   top: 11.5em;
@@ -168,14 +190,6 @@ footer {
       margin-top: 10em; } }
   .heartAnime:hover .heart2 {
     height: 30px; }
-
-.heart2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transition: height 0.4s ease;
-  height: 0;
-  overflow: hidden; }
 
 .heartPages {
   position: absolute;
@@ -269,7 +283,6 @@ footer {
     background-color: #99e2d0;
     border-radius: 50%; }
     .box .check .fa-check-circle {
-      border-radius: 50%;
       border: none;
       background-color: white; }
 

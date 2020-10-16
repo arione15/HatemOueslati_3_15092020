@@ -26,7 +26,7 @@
 }
 .box {
   display: flex;
-  width: 0.0000001%; // Un tour de magie personnel !!!
+  width: 0.0000001%; // Un tour de magie personnel Pour éviter un effet de saccade !!!
   transition: all 1s ease-in-out;
   background-color: $btn_new;
   color: $btn_new;
@@ -38,7 +38,7 @@
     background-color: $btn_new;
     border-radius: 50%;
     .fa-check-circle {
-      border-radius: 50%;
+      //border-radius: 50%;
       border: none;
       background-color: white;
     }
@@ -46,7 +46,6 @@
 }
 .menus {
   background-color: white;
-
   display: flex;
   width: 80%;
   margin: 0 auto 1em;

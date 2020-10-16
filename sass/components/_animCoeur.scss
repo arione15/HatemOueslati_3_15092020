@@ -8,6 +8,14 @@
   font-size: 1.5em;
 }
 
+.heart2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: height 0.4s ease;
+  height: 0;
+  overflow: hidden;
+}
 .heartAnime {
   position: absolute;
   top: 11.5em;
@@ -16,24 +24,13 @@
   @media screen and(min-width:768px) and(max-width:992px) {
     margin-top: 10em;
   }
-  //overflow: hidden;
-  //background-color: #fff;
-
   &:hover {
     & .heart2 {
       height: 30px;
     }
   }
 }
-.heart2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  //transform-origin: center center;
-  transition: height 0.4s ease;
-  height: 0;
-  overflow: hidden;
-}
+
 .heartPages {
   position: absolute;
   top: 2em;

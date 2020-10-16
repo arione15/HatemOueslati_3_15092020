@@ -3,6 +3,7 @@
 @import "./base/base";
 @import "./components/fleche";
 @import "./components/loader";
+@import "./components/animLoader";
 @import "./components/header";
 @import "./components/geolocalisation";
 @import "./components/footer";
@@ -46,7 +47,6 @@
         }
         @media screen and(min-width:993px) {
           margin-left: 1.5em;
-          
         }
       }
       .menus {
@@ -57,7 +57,6 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-    
     }
   }
   .tousRestos {

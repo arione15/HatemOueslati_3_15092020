@@ -10,6 +10,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: "Roboto", sans-serif;
   font-size: 100%;
 }
 
@@ -33,13 +34,18 @@ h1 {
 }
 
 h2 {
-  margin: 2em 0 1em 1em;
-  line-height: 1;
+  margin: 1.5em 0 1em 1em;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   h2 {
-    padding-bottom: 0.5em;
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  h2 {
+    font-size: 2.5em;
   }
 }
 
@@ -165,6 +171,50 @@ hr {
           animation-delay: 2000ms;
 }
 
+@-webkit-keyframes loadBar {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes loadBar {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes mvtBoule {
+  0% {
+    margin-left: 0%;
+    opacity: 1;
+  }
+  100% {
+    margin-left: 80%;
+    opacity: 0.8;
+  }
+}
+
+@keyframes mvtBoule {
+  0% {
+    margin-left: 0%;
+    opacity: 1;
+  }
+  100% {
+    margin-left: 80%;
+    opacity: 0.8;
+  }
+}
+
 .flexHeader {
   height: 1em;
   width: 100%;
@@ -190,6 +240,8 @@ hr {
           align-items: center;
   border-top: 4px solid #d8d8d8;
   border-radius: 3px;
+  font-family: "Roboto";
+  padding-bottom: 1em;
 }
 
 .locate img {
@@ -260,6 +312,16 @@ footer .flexFooter .partner h4 {
   font-size: 1.5em;
 }
 
+.heart2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: height 0.4s ease;
+  transition: height 0.4s ease;
+  height: 0;
+  overflow: hidden;
+}
+
 .heartAnime {
   position: absolute;
   top: 11.5em;
@@ -277,29 +339,20 @@ footer .flexFooter .partner h4 {
   height: 30px;
 }
 
-.heart2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  -webkit-transition: height 0.4s ease;
-  transition: height 0.4s ease;
-  height: 0;
-  overflow: hidden;
-}
-
 .heartPages {
-  top: 3em;
+  position: absolute;
+  top: 2em;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .heartPages {
-    margin-top: 17.5em;
+    margin-top: 1em;
   }
 }
 
 @media screen and (min-width: 993px) {
   .heartPages {
-    margin-top: 24em;
+    margin-top: 2em;
   }
 }
 
@@ -419,6 +472,7 @@ footer .flexFooter .partner h4 {
 .prix {
   width: 20%;
   margin-top: 1em;
+  text-align: center;
 }
 
 .box {
@@ -445,7 +499,6 @@ footer .flexFooter .partner h4 {
 }
 
 .box .check .fa-check-circle {
-  border-radius: 50%;
   border: none;
   background-color: white;
 }
@@ -639,7 +692,7 @@ footer .flexFooter .partner h4 {
   background-color: #f6f6f6;
   width: 80%;
   margin: 1.8em 2em;
-  height: 3.5em;
+  height: 4em;
   border-radius: 1.2em;
   -webkit-box-shadow: 2px 8px 15px #d8d8d8;
           box-shadow: 2px 8px 15px #d8d8d8;
@@ -658,10 +711,15 @@ footer .flexFooter .partner h4 {
   font-size: 25px;
 }
 
+.etape p {
+  margin: 0;
+}
+
 .etape :last-child,
 .etape :nth-child(2) {
   margin-left: 1.5em;
   font-weight: 600;
+  font-size: 1.4em;
 }
 
 .etape span {
@@ -684,12 +742,12 @@ footer .flexFooter .partner h4 {
 }
 
 .booking {
-  margin-bottom: 2.5em;
+  margin-bottom: 4em;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .booking {
-    padding-bottom: 0.5em;
+    padding-bottom: 5em;
   }
   .booking .etape {
     display: -webkit-box;
@@ -763,6 +821,9 @@ footer .flexFooter .partner h4 {
     text-align: center;
     color: white;
   }
+  .modeEmploi .etape p {
+    font-size: 1.5em;
+  }
 }
 
 .btnPrincipal {
@@ -775,7 +836,7 @@ footer .flexFooter .partner h4 {
   text-align: center;
   color: #fff;
   text-align: center;
-  vertical-align: middle;
+  font-weight: 700;
   margin: auto;
   max-width: 30%;
   max-height: 10%;
@@ -800,6 +861,33 @@ footer .flexFooter .partner h4 {
           box-shadow: 0px 10px 16px -3px rgba(0, 0, 0, 0.8);
 }
 
+.btn {
+  background-color: #9356dc;
+  border-radius: 5em;
+  border: none;
+  color: #fff;
+  height: 3.5em;
+  line-height: 3.5em;
+  font-size: 1.3em;
+  font-family: "Roboto";
+  padding: 0 1.5em 0 1.5em;
+  background: linear-gradient(-10deg, #9356dc, #ff79da);
+  -webkit-transition: background-color 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
+  -webkit-box-shadow: 0px 10px 16px -3px rgba(0, 0, 0, 0.17);
+          box-shadow: 0px 10px 16px -3px rgba(0, 0, 0, 0.17);
+  -webkit-transition: -webkit-box-shadow 500ms ease-in-out;
+  transition: -webkit-box-shadow 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out, -webkit-box-shadow 500ms ease-in-out;
+}
+
+.btn:hover {
+  background: linear-gradient(-10deg, #a16be0, #ff93e1);
+  -webkit-box-shadow: 0px 10px 16px -3px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 10px 16px -3px rgba(0, 0, 0, 0.8);
+}
+
 .explorer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -812,12 +900,12 @@ footer .flexFooter .partner h4 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding-bottom: 3em;
+  padding-bottom: 4em;
   background-color: #f6f6f6;
 }
 
 .explorer .welcome {
-  padding: 0 4em;
+  padding: 0 4em 2em 4em;
 }
 
 .explorer .welcome p {
@@ -840,21 +928,10 @@ footer .flexFooter .partner h4 {
   font-weight: 600;
 }
 
-/* .notes1 {
-  border-radius: 3em 3em 0 0;
-  z-index: 10;
-  margin-top: -2em;
-  h2 {
-    font-family: "Shrikhand", cursive;
-    font-size: 1.7em;
-    margin-top: 1.5em;
-  }
-  p,
-  hr {
-    margin-left: 1.5em;
-    margin-bottom: 0;
-  }
-} */
+.radiusPage {
+  border-radius: 50px 50px 0 0;
+}
+
 .notes {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -863,10 +940,9 @@ footer .flexFooter .partner h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: grey;
-  padding-bottom: 2.5em;
+  background-color: #f6f6f6;
+  padding-bottom: 3.5em;
   margin-top: -3em;
-  border-radius: 3em 3em 0 0;
 }
 
 .notes .nomAvis {
@@ -877,7 +953,7 @@ footer .flexFooter .partner h4 {
   font-family: "Shrikhand", cursive;
 }
 
-.notes .three-dishes {
+.notes .troisEnsembles .three-dishes {
   margin-bottom: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -888,7 +964,7 @@ footer .flexFooter .partner h4 {
           flex-direction: column;
 }
 
-.notes .three-dishes .dish {
+.notes .troisEnsembles .three-dishes .dish {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -896,69 +972,41 @@ footer .flexFooter .partner h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 2em;
+  margin-left: 2em;
 }
 
-@media screen and (min-width: 993px) {
-  .notes .three-dishes .dish {
-    margin-left: 1em;
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .notes .troisEnsembles .three-dishes .dish {
+    margin-left: 3em;
   }
 }
 
-.notes .three-dishes .menus {
+@media screen and (min-width: 993px) {
+  .notes .troisEnsembles .three-dishes .dish {
+    margin-left: 1.5em;
+  }
+}
+
+.notes .troisEnsembles .three-dishes .menus {
   width: 90%;
 }
 
 @media screen and (min-width: 993px) {
-  .notes .three-dishes {
+  .notes .troisEnsembles {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-  }
-  .notes .three-dishes .entrees,
-  .notes .three-dishes .plats,
-  .notes .three-dishes .desserts {
-    margin: 0;
-    padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    font-size: 0.8em;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .notes {
-    margin-top: 1em;
-    padding-top: 6em;
+  .notes .tousRestos {
+    padding-top: 7em;
   }
-}
-
-@media screen and (min-width: 993px) {
-  .notes {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
-.notes .btnPrincipal {
-  width: 50%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 .nomResto {
@@ -967,17 +1015,25 @@ footer .flexFooter .partner h4 {
 
 .nomResto p {
   margin-top: 0.3em;
+  margin-bottom: 1em;
 }
 
 /***********************************************/
 /***********************************************/
 /***********************************************/
 /***********************************************/
+.tousRestos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .titre {
-    margin-top: 21em;
     position: absolute;
-    top: 10em;
+    top: 23.5em;
   }
 }
 
@@ -990,20 +1046,8 @@ footer .flexFooter .partner h4 {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .titre1 {
-    margin-top: -1.5em;
-  }
-}
-
-@media screen and (min-width: 993px) {
-  .titre1 {
-    width: 100%;
-  }
-}
-
 .restaurants {
-  width: 80%;
+  width: 90%;
   margin: 0 auto 1.5em auto;
   padding-bottom: 0.1em;
   background-color: white;
@@ -1017,19 +1061,6 @@ footer .flexFooter .partner h4 {
   transition: box-shadow 500ms ease-in-out, -webkit-box-shadow 500ms ease-in-out;
 }
 
-@media screen and (min-width: 993px) {
-  .restaurants {
-    margin: 0.5em auto 0.5em;
-    width: 40%;
-  }
-  .restaurants p {
-    font-size: 0.8em;
-  }
-  .restaurants h3 {
-    font-size: 1em;
-  }
-}
-
 .restaurants:hover {
   -webkit-box-shadow: 2px 8px 20px #a5a5a5;
           box-shadow: 2px 8px 20px #a5a5a5;
@@ -1037,8 +1068,21 @@ footer .flexFooter .partner h4 {
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .restaurants .nom h3 {
-    padding-top: 0.5em;
+  .restaurants .nomResto h3 {
+    padding-top: 1.5em;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .restaurants {
+    margin: 0.5em auto 0.5em;
+    width: 40%;
+  }
+  .restaurants p {
+    font-size: 1.2em;
+  }
+  .restaurants h3 {
+    font-size: 1.8em;
   }
 }
 

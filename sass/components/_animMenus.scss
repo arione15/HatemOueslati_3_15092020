@@ -1,49 +1,49 @@
 /* Animation à l'affichage de la page de menus : les menus apparaissent peit à petit*/
 @keyframes affichageMenus {
-    0% {
-        transform: translateY(20%);
-        opacity: 0;
-    }
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
 
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 #e1 {
-    animation: affichageMenus 1s ease-out 0s 1;
-    animation-duration: 2s 4s;
+  animation: affichageMenus 1s ease-out 0s 1;
+  animation-duration: 2s 4s;
 }
 #e2 {
-    animation: affichageMenus 2s ease-out 0s 1;
-    animation-duration: 2s 4s;
+  animation: affichageMenus 2s ease-out 0s 1;
+  animation-duration: 2s 4s;
 }
 #e3 {
-    animation: affichageMenus 3s ease-out 0s 1;
-    animation-duration: 2s 4s;
+  animation: affichageMenus 3s ease-out 0s 1;
+  animation-duration: 2s 4s;
 }
 
 #p1 {
-    animation: affichageMenus 4s ease-out 0s 1;
-    animation-duration: 2s 4s;
+  animation: affichageMenus 4s ease-out 0s 1;
+  animation-duration: 2s 4s;
 }
 #p2 {
-    animation: affichageMenus 5s ease-out 0s 1;
-    animation-duration: 2s 4s;
+  animation: affichageMenus 5s ease-out 0s 1;
+  animation-duration: 2s 4s;
 }
 #p3 {
-    animation: affichageMenus 6s ease-out 0s 1;
-    animation-duration: 2s 4s;
+  animation: affichageMenus 6s ease-out 0s 1;
+  animation-duration: 2s 4s;
 }
 #d1 {
-    animation: affichageMenus 7s ease-out 0s 1;
-    animation-duration: 2s 4s;
+  animation: affichageMenus 7s ease-out 0s 1;
+  animation-duration: 2s 4s;
 }
 #d2 {
-    animation: affichageMenus 8s ease-out 0s 1;
-    animation-duration: 2s 4s;
+  animation: affichageMenus 8s ease-out 0s 1;
+  animation-duration: 2s 4s;
 }
 #d3 {
-    animation: affichageMenus 9s ease-out 0s 1;
-    animation-duration: 2s 4s;
+  animation: affichageMenus 9s ease-out 0s 1;
+  animation-duration: 2s 4s;
 }
