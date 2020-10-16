@@ -265,8 +265,7 @@ footer {
   display: flex;
   width: 0.0000001%;
   transition: all 1s ease-in-out;
-  background-color: #99e2d0;
-  color: #99e2d0; }
+  background-color: #99e2d0; }
   .box .check {
     margin: auto;
     transition: transform 1s;
