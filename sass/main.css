@@ -114,7 +114,7 @@ hr {
   margin-bottom: 20px;
   border: solid 2px #f6f6f6;
   background-color: #ff79da;
-  border-radius: 2;
+  border-radius: 2px;
   -webkit-animation: loadBar 1s 100ms ease-in-out 3 alternate both;
           animation: loadBar 1s 100ms ease-in-out 3 alternate both;
 }
