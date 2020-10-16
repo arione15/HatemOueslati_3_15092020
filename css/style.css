@@ -672,10 +672,10 @@ footer {
         text-align: center;
         margin: auto; } }
   .restaurants .photo1 {
-    background-image: url(./img/restaurants/p1.jpg); }
+    background-image: url(../../img/restaurants/p1.jpg); }
   .restaurants .photo2 {
-    background-image: url(./img/restaurants/p2.jpg); }
+    background-image: url(../../img/restaurants/p2.jpg); }
   .restaurants .photo3 {
-    background-image: url(./img/restaurants/p3.jpg); }
+    background-image: url(../../img/restaurants/p3.jpg); }
   .restaurants .photo4 {
-    background-image: url(./img/restaurants/p4.jpg); }
+    background-image: url(../../img/restaurants/p4.jpg); }
