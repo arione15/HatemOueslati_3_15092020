@@ -350,7 +350,7 @@ footer {
   background-size: 100%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(/img/restaurants/p1.jpg);
+  background-image: url(../img/restaurants/p1.jpg);
   border-radius: 10px; }
   .photoP1 .imgRes .inner {
     padding-top: 66.68%;
@@ -365,7 +365,7 @@ footer {
   background-size: 100%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(/img/restaurants/p2.jpg);
+  background-image: url(../img/restaurants/p2.jpg);
   border-radius: 10px; }
   .photoP2 .imgRes .inner {
     padding-top: 66.68%;
@@ -380,7 +380,7 @@ footer {
   background-size: 100%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(/img/restaurants/p3.jpg);
+  background-image: url(../img/restaurants/p3.jpg);
   border-radius: 10px; }
   .photoP3 .imgRes .inner {
     padding-top: 66.68%;
@@ -395,7 +395,7 @@ footer {
   background-size: 100%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(/img/restaurants/p4.jpg);
+  background-image: url(../img/restaurants/p4.jpg);
   border-radius: 10px; }
   .photoP4 .imgRes .inner {
     padding-top: 66.68%;
